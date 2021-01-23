@@ -1,0 +1,53 @@
+query JobPostByCompany ($companyId: Int!) {
+    job_post(where: {companyId: {_eq: $companyId}}) {
+        company {
+            businessStream {
+                businessStreamName
+                id
+                image
+            }
+            companyName
+            companyWebsiteUrl
+            establishment_date
+            id
+            profileDescription
+        }
+        createdDate
+        id
+        isActive
+        isCompanyNameHidden
+        jobDescription
+        jobLocation {
+            city
+            country
+            id
+            state
+            streetAddress
+            zip
+        }
+        jobType {
+            id
+            image
+            jobType
+        }
+        salary
+        userAccount {
+            contactNumber
+            dateOfBirth
+            email
+            emailNotificationActive
+            gender
+            id
+            isActive
+            userImage
+            smsNotificationActive
+            registrationDate
+            userType {
+                id
+                userTypeName
+            }
+        }
+    }
+}
+
+

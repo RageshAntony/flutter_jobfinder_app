@@ -1,0 +1,6341 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: query_root
+    mutation: mutation_root
+    subscription: subscription_root
+}
+
+"columns and relationships of \"business_stream\""
+type business_stream {
+    businessStreamName: String!
+    id: Int!
+    image: String
+}
+
+"aggregated selection of \"business_stream\""
+type business_stream_aggregate {
+    aggregate: business_stream_aggregate_fields
+    nodes: [business_stream!]!
+}
+
+"aggregate fields of \"business_stream\""
+type business_stream_aggregate_fields {
+    avg: business_stream_avg_fields
+    count(columns: [business_stream_select_column!], distinct: Boolean): Int
+    max: business_stream_max_fields
+    min: business_stream_min_fields
+    stddev: business_stream_stddev_fields
+    stddev_pop: business_stream_stddev_pop_fields
+    stddev_samp: business_stream_stddev_samp_fields
+    sum: business_stream_sum_fields
+    var_pop: business_stream_var_pop_fields
+    var_samp: business_stream_var_samp_fields
+    variance: business_stream_variance_fields
+}
+
+"aggregate avg on columns"
+type business_stream_avg_fields {
+    id: Float
+}
+
+"aggregate max on columns"
+type business_stream_max_fields {
+    businessStreamName: String
+    id: Int
+    image: String
+}
+
+"aggregate min on columns"
+type business_stream_min_fields {
+    businessStreamName: String
+    id: Int
+    image: String
+}
+
+"response of any mutation on the table \"business_stream\""
+type business_stream_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [business_stream!]!
+}
+
+"aggregate stddev on columns"
+type business_stream_stddev_fields {
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type business_stream_stddev_pop_fields {
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type business_stream_stddev_samp_fields {
+    id: Float
+}
+
+"aggregate sum on columns"
+type business_stream_sum_fields {
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type business_stream_var_pop_fields {
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type business_stream_var_samp_fields {
+    id: Float
+}
+
+"aggregate variance on columns"
+type business_stream_variance_fields {
+    id: Float
+}
+
+"columns and relationships of \"company\""
+type company {
+    "An object relationship"
+    businessStream: business_stream!
+    businessStreamId: Int!
+    companyName: String!
+    companyWebsiteUrl: String!
+    establishment_date: date!
+    id: Int!
+    profileDescription: String!
+}
+
+"aggregated selection of \"company\""
+type company_aggregate {
+    aggregate: company_aggregate_fields
+    nodes: [company!]!
+}
+
+"aggregate fields of \"company\""
+type company_aggregate_fields {
+    avg: company_avg_fields
+    count(columns: [company_select_column!], distinct: Boolean): Int
+    max: company_max_fields
+    min: company_min_fields
+    stddev: company_stddev_fields
+    stddev_pop: company_stddev_pop_fields
+    stddev_samp: company_stddev_samp_fields
+    sum: company_sum_fields
+    var_pop: company_var_pop_fields
+    var_samp: company_var_samp_fields
+    variance: company_variance_fields
+}
+
+"aggregate avg on columns"
+type company_avg_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"columns and relationships of \"company_image\""
+type company_image {
+    "An object relationship"
+    company: company!
+    companyId: Int!
+    companyImage: String!
+    id: Int!
+}
+
+"aggregated selection of \"company_image\""
+type company_image_aggregate {
+    aggregate: company_image_aggregate_fields
+    nodes: [company_image!]!
+}
+
+"aggregate fields of \"company_image\""
+type company_image_aggregate_fields {
+    avg: company_image_avg_fields
+    count(columns: [company_image_select_column!], distinct: Boolean): Int
+    max: company_image_max_fields
+    min: company_image_min_fields
+    stddev: company_image_stddev_fields
+    stddev_pop: company_image_stddev_pop_fields
+    stddev_samp: company_image_stddev_samp_fields
+    sum: company_image_sum_fields
+    var_pop: company_image_var_pop_fields
+    var_samp: company_image_var_samp_fields
+    variance: company_image_variance_fields
+}
+
+"aggregate avg on columns"
+type company_image_avg_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate max on columns"
+type company_image_max_fields {
+    companyId: Int
+    companyImage: String
+    id: Int
+}
+
+"aggregate min on columns"
+type company_image_min_fields {
+    companyId: Int
+    companyImage: String
+    id: Int
+}
+
+"response of any mutation on the table \"company_image\""
+type company_image_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [company_image!]!
+}
+
+"aggregate stddev on columns"
+type company_image_stddev_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type company_image_stddev_pop_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type company_image_stddev_samp_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate sum on columns"
+type company_image_sum_fields {
+    companyId: Int
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type company_image_var_pop_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type company_image_var_samp_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate variance on columns"
+type company_image_variance_fields {
+    companyId: Float
+    id: Float
+}
+
+"aggregate max on columns"
+type company_max_fields {
+    businessStreamId: Int
+    companyName: String
+    companyWebsiteUrl: String
+    establishment_date: date
+    id: Int
+    profileDescription: String
+}
+
+"aggregate min on columns"
+type company_min_fields {
+    businessStreamId: Int
+    companyName: String
+    companyWebsiteUrl: String
+    establishment_date: date
+    id: Int
+    profileDescription: String
+}
+
+"response of any mutation on the table \"company\""
+type company_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [company!]!
+}
+
+"aggregate stddev on columns"
+type company_stddev_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type company_stddev_pop_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type company_stddev_samp_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"aggregate sum on columns"
+type company_sum_fields {
+    businessStreamId: Int
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type company_var_pop_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type company_var_samp_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"aggregate variance on columns"
+type company_variance_fields {
+    businessStreamId: Float
+    id: Float
+}
+
+"columns and relationships of \"education_detail\""
+type education_detail {
+    InstituteUniversityName: String!
+    certificateDegreeName: String!
+    cgpa: Int
+    completionDate: date
+    major: String!
+    percentage: Int
+    "An object relationship"
+    seekerProfile: seeker_profile!
+    startingDate: date!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"education_detail\""
+type education_detail_aggregate {
+    aggregate: education_detail_aggregate_fields
+    nodes: [education_detail!]!
+}
+
+"aggregate fields of \"education_detail\""
+type education_detail_aggregate_fields {
+    avg: education_detail_avg_fields
+    count(columns: [education_detail_select_column!], distinct: Boolean): Int
+    max: education_detail_max_fields
+    min: education_detail_min_fields
+    stddev: education_detail_stddev_fields
+    stddev_pop: education_detail_stddev_pop_fields
+    stddev_samp: education_detail_stddev_samp_fields
+    sum: education_detail_sum_fields
+    var_pop: education_detail_var_pop_fields
+    var_samp: education_detail_var_samp_fields
+    variance: education_detail_variance_fields
+}
+
+"aggregate avg on columns"
+type education_detail_avg_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type education_detail_max_fields {
+    InstituteUniversityName: String
+    certificateDegreeName: String
+    cgpa: Int
+    completionDate: date
+    major: String
+    percentage: Int
+    startingDate: date
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type education_detail_min_fields {
+    InstituteUniversityName: String
+    certificateDegreeName: String
+    cgpa: Int
+    completionDate: date
+    major: String
+    percentage: Int
+    startingDate: date
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"education_detail\""
+type education_detail_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [education_detail!]!
+}
+
+"aggregate stddev on columns"
+type education_detail_stddev_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type education_detail_stddev_pop_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type education_detail_stddev_samp_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type education_detail_sum_fields {
+    cgpa: Int
+    percentage: Int
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type education_detail_var_pop_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type education_detail_var_samp_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type education_detail_variance_fields {
+    cgpa: Float
+    percentage: Float
+    userAccountId: Float
+}
+
+"columns and relationships of \"experience_detail\""
+type experience_detail {
+    companyName: String!
+    description: String!
+    endDate: date!
+    isCurrentJob: bpchar!
+    jobLocationCity: String!
+    jobLocationCountry: String!
+    jobLocationState: String!
+    jobTitle: String!
+    "An object relationship"
+    seekerProfile: seeker_profile!
+    startDate: date!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"experience_detail\""
+type experience_detail_aggregate {
+    aggregate: experience_detail_aggregate_fields
+    nodes: [experience_detail!]!
+}
+
+"aggregate fields of \"experience_detail\""
+type experience_detail_aggregate_fields {
+    avg: experience_detail_avg_fields
+    count(columns: [experience_detail_select_column!], distinct: Boolean): Int
+    max: experience_detail_max_fields
+    min: experience_detail_min_fields
+    stddev: experience_detail_stddev_fields
+    stddev_pop: experience_detail_stddev_pop_fields
+    stddev_samp: experience_detail_stddev_samp_fields
+    sum: experience_detail_sum_fields
+    var_pop: experience_detail_var_pop_fields
+    var_samp: experience_detail_var_samp_fields
+    variance: experience_detail_variance_fields
+}
+
+"aggregate avg on columns"
+type experience_detail_avg_fields {
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type experience_detail_max_fields {
+    companyName: String
+    description: String
+    endDate: date
+    jobLocationCity: String
+    jobLocationCountry: String
+    jobLocationState: String
+    jobTitle: String
+    startDate: date
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type experience_detail_min_fields {
+    companyName: String
+    description: String
+    endDate: date
+    jobLocationCity: String
+    jobLocationCountry: String
+    jobLocationState: String
+    jobTitle: String
+    startDate: date
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"experience_detail\""
+type experience_detail_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [experience_detail!]!
+}
+
+"aggregate stddev on columns"
+type experience_detail_stddev_fields {
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type experience_detail_stddev_pop_fields {
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type experience_detail_stddev_samp_fields {
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type experience_detail_sum_fields {
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type experience_detail_var_pop_fields {
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type experience_detail_var_samp_fields {
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type experience_detail_variance_fields {
+    userAccountId: Float
+}
+
+"columns and relationships of \"job_location\""
+type job_location {
+    city: String!
+    country: String!
+    id: Int!
+    state: String!
+    streetAddress: String
+    zip: String
+}
+
+"aggregated selection of \"job_location\""
+type job_location_aggregate {
+    aggregate: job_location_aggregate_fields
+    nodes: [job_location!]!
+}
+
+"aggregate fields of \"job_location\""
+type job_location_aggregate_fields {
+    avg: job_location_avg_fields
+    count(columns: [job_location_select_column!], distinct: Boolean): Int
+    max: job_location_max_fields
+    min: job_location_min_fields
+    stddev: job_location_stddev_fields
+    stddev_pop: job_location_stddev_pop_fields
+    stddev_samp: job_location_stddev_samp_fields
+    sum: job_location_sum_fields
+    var_pop: job_location_var_pop_fields
+    var_samp: job_location_var_samp_fields
+    variance: job_location_variance_fields
+}
+
+"aggregate avg on columns"
+type job_location_avg_fields {
+    id: Float
+}
+
+"aggregate max on columns"
+type job_location_max_fields {
+    city: String
+    country: String
+    id: Int
+    state: String
+    streetAddress: String
+    zip: String
+}
+
+"aggregate min on columns"
+type job_location_min_fields {
+    city: String
+    country: String
+    id: Int
+    state: String
+    streetAddress: String
+    zip: String
+}
+
+"response of any mutation on the table \"job_location\""
+type job_location_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [job_location!]!
+}
+
+"aggregate stddev on columns"
+type job_location_stddev_fields {
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type job_location_stddev_pop_fields {
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type job_location_stddev_samp_fields {
+    id: Float
+}
+
+"aggregate sum on columns"
+type job_location_sum_fields {
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type job_location_var_pop_fields {
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type job_location_var_samp_fields {
+    id: Float
+}
+
+"aggregate variance on columns"
+type job_location_variance_fields {
+    id: Float
+}
+
+"columns and relationships of \"job_post\""
+type job_post {
+    "An object relationship"
+    company: company!
+    companyId: Int!
+    createdDate: date!
+    id: Int!
+    isActive: Boolean
+    isCompanyNameHidden: Boolean
+    jobDescription: String!
+    "An object relationship"
+    jobLocation: job_location!
+    jobLocationId: Int!
+    "An object relationship"
+    jobType: job_type!
+    jobTypeId: Int!
+    postedById: Int!
+    salary: Int
+    "An object relationship"
+    userAccount: user_account!
+}
+
+"columns and relationships of \"job_post_activity\""
+type job_post_activity {
+    applyDate: date!
+    "An object relationship"
+    jobPost: job_post!
+    jobPostId: Int!
+    "An object relationship"
+    userAccount: user_account!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"job_post_activity\""
+type job_post_activity_aggregate {
+    aggregate: job_post_activity_aggregate_fields
+    nodes: [job_post_activity!]!
+}
+
+"aggregate fields of \"job_post_activity\""
+type job_post_activity_aggregate_fields {
+    avg: job_post_activity_avg_fields
+    count(columns: [job_post_activity_select_column!], distinct: Boolean): Int
+    max: job_post_activity_max_fields
+    min: job_post_activity_min_fields
+    stddev: job_post_activity_stddev_fields
+    stddev_pop: job_post_activity_stddev_pop_fields
+    stddev_samp: job_post_activity_stddev_samp_fields
+    sum: job_post_activity_sum_fields
+    var_pop: job_post_activity_var_pop_fields
+    var_samp: job_post_activity_var_samp_fields
+    variance: job_post_activity_variance_fields
+}
+
+"aggregate avg on columns"
+type job_post_activity_avg_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type job_post_activity_max_fields {
+    applyDate: date
+    jobPostId: Int
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type job_post_activity_min_fields {
+    applyDate: date
+    jobPostId: Int
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"job_post_activity\""
+type job_post_activity_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [job_post_activity!]!
+}
+
+"aggregate stddev on columns"
+type job_post_activity_stddev_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type job_post_activity_stddev_pop_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type job_post_activity_stddev_samp_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type job_post_activity_sum_fields {
+    jobPostId: Int
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type job_post_activity_var_pop_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type job_post_activity_var_samp_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type job_post_activity_variance_fields {
+    jobPostId: Float
+    userAccountId: Float
+}
+
+"aggregated selection of \"job_post\""
+type job_post_aggregate {
+    aggregate: job_post_aggregate_fields
+    nodes: [job_post!]!
+}
+
+"aggregate fields of \"job_post\""
+type job_post_aggregate_fields {
+    avg: job_post_avg_fields
+    count(columns: [job_post_select_column!], distinct: Boolean): Int
+    max: job_post_max_fields
+    min: job_post_min_fields
+    stddev: job_post_stddev_fields
+    stddev_pop: job_post_stddev_pop_fields
+    stddev_samp: job_post_stddev_samp_fields
+    sum: job_post_sum_fields
+    var_pop: job_post_var_pop_fields
+    var_samp: job_post_var_samp_fields
+    variance: job_post_variance_fields
+}
+
+"aggregate avg on columns"
+type job_post_avg_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate max on columns"
+type job_post_max_fields {
+    companyId: Int
+    createdDate: date
+    id: Int
+    jobDescription: String
+    jobLocationId: Int
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+}
+
+"aggregate min on columns"
+type job_post_min_fields {
+    companyId: Int
+    createdDate: date
+    id: Int
+    jobDescription: String
+    jobLocationId: Int
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+}
+
+"response of any mutation on the table \"job_post\""
+type job_post_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [job_post!]!
+}
+
+"columns and relationships of \"job_post_skill_set\""
+type job_post_skill_set {
+    "An object relationship"
+    jobPost: job_post!
+    jobPostId: Int!
+    skillLevel: Int!
+    "An object relationship"
+    skillSet: skill_set!
+    skillSetId: Int!
+}
+
+"aggregated selection of \"job_post_skill_set\""
+type job_post_skill_set_aggregate {
+    aggregate: job_post_skill_set_aggregate_fields
+    nodes: [job_post_skill_set!]!
+}
+
+"aggregate fields of \"job_post_skill_set\""
+type job_post_skill_set_aggregate_fields {
+    avg: job_post_skill_set_avg_fields
+    count(columns: [job_post_skill_set_select_column!], distinct: Boolean): Int
+    max: job_post_skill_set_max_fields
+    min: job_post_skill_set_min_fields
+    stddev: job_post_skill_set_stddev_fields
+    stddev_pop: job_post_skill_set_stddev_pop_fields
+    stddev_samp: job_post_skill_set_stddev_samp_fields
+    sum: job_post_skill_set_sum_fields
+    var_pop: job_post_skill_set_var_pop_fields
+    var_samp: job_post_skill_set_var_samp_fields
+    variance: job_post_skill_set_variance_fields
+}
+
+"aggregate avg on columns"
+type job_post_skill_set_avg_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate max on columns"
+type job_post_skill_set_max_fields {
+    jobPostId: Int
+    skillLevel: Int
+    skillSetId: Int
+}
+
+"aggregate min on columns"
+type job_post_skill_set_min_fields {
+    jobPostId: Int
+    skillLevel: Int
+    skillSetId: Int
+}
+
+"response of any mutation on the table \"job_post_skill_set\""
+type job_post_skill_set_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [job_post_skill_set!]!
+}
+
+"aggregate stddev on columns"
+type job_post_skill_set_stddev_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate stddev_pop on columns"
+type job_post_skill_set_stddev_pop_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate stddev_samp on columns"
+type job_post_skill_set_stddev_samp_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate sum on columns"
+type job_post_skill_set_sum_fields {
+    jobPostId: Int
+    skillLevel: Int
+    skillSetId: Int
+}
+
+"aggregate var_pop on columns"
+type job_post_skill_set_var_pop_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate var_samp on columns"
+type job_post_skill_set_var_samp_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate variance on columns"
+type job_post_skill_set_variance_fields {
+    jobPostId: Float
+    skillLevel: Float
+    skillSetId: Float
+}
+
+"aggregate stddev on columns"
+type job_post_stddev_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate stddev_pop on columns"
+type job_post_stddev_pop_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate stddev_samp on columns"
+type job_post_stddev_samp_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate sum on columns"
+type job_post_sum_fields {
+    companyId: Int
+    id: Int
+    jobLocationId: Int
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+}
+
+"aggregate var_pop on columns"
+type job_post_var_pop_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate var_samp on columns"
+type job_post_var_samp_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"aggregate variance on columns"
+type job_post_variance_fields {
+    companyId: Float
+    id: Float
+    jobLocationId: Float
+    jobTypeId: Float
+    postedById: Float
+    salary: Float
+}
+
+"columns and relationships of \"job_type\""
+type job_type {
+    id: Int!
+    image: String
+    jobType: String!
+}
+
+"aggregated selection of \"job_type\""
+type job_type_aggregate {
+    aggregate: job_type_aggregate_fields
+    nodes: [job_type!]!
+}
+
+"aggregate fields of \"job_type\""
+type job_type_aggregate_fields {
+    avg: job_type_avg_fields
+    count(columns: [job_type_select_column!], distinct: Boolean): Int
+    max: job_type_max_fields
+    min: job_type_min_fields
+    stddev: job_type_stddev_fields
+    stddev_pop: job_type_stddev_pop_fields
+    stddev_samp: job_type_stddev_samp_fields
+    sum: job_type_sum_fields
+    var_pop: job_type_var_pop_fields
+    var_samp: job_type_var_samp_fields
+    variance: job_type_variance_fields
+}
+
+"aggregate avg on columns"
+type job_type_avg_fields {
+    id: Float
+}
+
+"aggregate max on columns"
+type job_type_max_fields {
+    id: Int
+    image: String
+    jobType: String
+}
+
+"aggregate min on columns"
+type job_type_min_fields {
+    id: Int
+    image: String
+    jobType: String
+}
+
+"response of any mutation on the table \"job_type\""
+type job_type_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [job_type!]!
+}
+
+"aggregate stddev on columns"
+type job_type_stddev_fields {
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type job_type_stddev_pop_fields {
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type job_type_stddev_samp_fields {
+    id: Float
+}
+
+"aggregate sum on columns"
+type job_type_sum_fields {
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type job_type_var_pop_fields {
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type job_type_var_samp_fields {
+    id: Float
+}
+
+"aggregate variance on columns"
+type job_type_variance_fields {
+    id: Float
+}
+
+"mutation root"
+type mutation_root {
+    "delete data from the table: \"business_stream\""
+    delete_business_stream(
+        "filter the rows which have to be deleted"
+        where: business_stream_bool_exp!
+    ): business_stream_mutation_response
+    "delete single row from the table: \"business_stream\""
+    delete_business_stream_by_pk(id: Int!): business_stream
+    "delete data from the table: \"company\""
+    delete_company(
+        "filter the rows which have to be deleted"
+        where: company_bool_exp!
+    ): company_mutation_response
+    "delete single row from the table: \"company\""
+    delete_company_by_pk(id: Int!): company
+    "delete data from the table: \"company_image\""
+    delete_company_image(
+        "filter the rows which have to be deleted"
+        where: company_image_bool_exp!
+    ): company_image_mutation_response
+    "delete single row from the table: \"company_image\""
+    delete_company_image_by_pk(id: Int!): company_image
+    "delete data from the table: \"education_detail\""
+    delete_education_detail(
+        "filter the rows which have to be deleted"
+        where: education_detail_bool_exp!
+    ): education_detail_mutation_response
+    "delete single row from the table: \"education_detail\""
+    delete_education_detail_by_pk(certificateDegreeName: String!, major: String!, userAccountId: Int!): education_detail
+    "delete data from the table: \"experience_detail\""
+    delete_experience_detail(
+        "filter the rows which have to be deleted"
+        where: experience_detail_bool_exp!
+    ): experience_detail_mutation_response
+    "delete single row from the table: \"experience_detail\""
+    delete_experience_detail_by_pk(endDate: date!, startDate: date!, userAccountId: Int!): experience_detail
+    "delete data from the table: \"job_location\""
+    delete_job_location(
+        "filter the rows which have to be deleted"
+        where: job_location_bool_exp!
+    ): job_location_mutation_response
+    "delete single row from the table: \"job_location\""
+    delete_job_location_by_pk(id: Int!): job_location
+    "delete data from the table: \"job_post\""
+    delete_job_post(
+        "filter the rows which have to be deleted"
+        where: job_post_bool_exp!
+    ): job_post_mutation_response
+    "delete data from the table: \"job_post_activity\""
+    delete_job_post_activity(
+        "filter the rows which have to be deleted"
+        where: job_post_activity_bool_exp!
+    ): job_post_activity_mutation_response
+    "delete single row from the table: \"job_post_activity\""
+    delete_job_post_activity_by_pk(jobPostId: Int!, userAccountId: Int!): job_post_activity
+    "delete single row from the table: \"job_post\""
+    delete_job_post_by_pk(id: Int!): job_post
+    "delete data from the table: \"job_post_skill_set\""
+    delete_job_post_skill_set(
+        "filter the rows which have to be deleted"
+        where: job_post_skill_set_bool_exp!
+    ): job_post_skill_set_mutation_response
+    "delete single row from the table: \"job_post_skill_set\""
+    delete_job_post_skill_set_by_pk(jobPostId: Int!, skillSetId: Int!): job_post_skill_set
+    "delete data from the table: \"job_type\""
+    delete_job_type(
+        "filter the rows which have to be deleted"
+        where: job_type_bool_exp!
+    ): job_type_mutation_response
+    "delete single row from the table: \"job_type\""
+    delete_job_type_by_pk(id: Int!): job_type
+    "delete data from the table: \"seeker_profile\""
+    delete_seeker_profile(
+        "filter the rows which have to be deleted"
+        where: seeker_profile_bool_exp!
+    ): seeker_profile_mutation_response
+    "delete single row from the table: \"seeker_profile\""
+    delete_seeker_profile_by_pk(userAccountId: Int!): seeker_profile
+    "delete data from the table: \"seeker_skill_set\""
+    delete_seeker_skill_set(
+        "filter the rows which have to be deleted"
+        where: seeker_skill_set_bool_exp!
+    ): seeker_skill_set_mutation_response
+    "delete single row from the table: \"seeker_skill_set\""
+    delete_seeker_skill_set_by_pk(skillSetId: Int!, userAccountId: Int!): seeker_skill_set
+    "delete data from the table: \"skill_set\""
+    delete_skill_set(
+        "filter the rows which have to be deleted"
+        where: skill_set_bool_exp!
+    ): skill_set_mutation_response
+    "delete single row from the table: \"skill_set\""
+    delete_skill_set_by_pk(id: Int!): skill_set
+    "delete data from the table: \"user_account\""
+    delete_user_account(
+        "filter the rows which have to be deleted"
+        where: user_account_bool_exp!
+    ): user_account_mutation_response
+    "delete single row from the table: \"user_account\""
+    delete_user_account_by_pk(id: Int!): user_account
+    "delete data from the table: \"user_log\""
+    delete_user_log(
+        "filter the rows which have to be deleted"
+        where: user_log_bool_exp!
+    ): user_log_mutation_response
+    "delete single row from the table: \"user_log\""
+    delete_user_log_by_pk(userAccountId: Int!): user_log
+    "delete data from the table: \"user_type\""
+    delete_user_type(
+        "filter the rows which have to be deleted"
+        where: user_type_bool_exp!
+    ): user_type_mutation_response
+    "delete single row from the table: \"user_type\""
+    delete_user_type_by_pk(id: Int!): user_type
+    "insert data into the table: \"business_stream\""
+    insert_business_stream(
+        "the rows to be inserted"
+        objects: [business_stream_insert_input!]!,
+        "on conflict condition"
+        on_conflict: business_stream_on_conflict
+    ): business_stream_mutation_response
+    "insert a single row into the table: \"business_stream\""
+    insert_business_stream_one(
+        "the row to be inserted"
+        object: business_stream_insert_input!,
+        "on conflict condition"
+        on_conflict: business_stream_on_conflict
+    ): business_stream
+    "insert data into the table: \"company\""
+    insert_company(
+        "the rows to be inserted"
+        objects: [company_insert_input!]!,
+        "on conflict condition"
+        on_conflict: company_on_conflict
+    ): company_mutation_response
+    "insert data into the table: \"company_image\""
+    insert_company_image(
+        "the rows to be inserted"
+        objects: [company_image_insert_input!]!,
+        "on conflict condition"
+        on_conflict: company_image_on_conflict
+    ): company_image_mutation_response
+    "insert a single row into the table: \"company_image\""
+    insert_company_image_one(
+        "the row to be inserted"
+        object: company_image_insert_input!,
+        "on conflict condition"
+        on_conflict: company_image_on_conflict
+    ): company_image
+    "insert a single row into the table: \"company\""
+    insert_company_one(
+        "the row to be inserted"
+        object: company_insert_input!,
+        "on conflict condition"
+        on_conflict: company_on_conflict
+    ): company
+    "insert data into the table: \"education_detail\""
+    insert_education_detail(
+        "the rows to be inserted"
+        objects: [education_detail_insert_input!]!,
+        "on conflict condition"
+        on_conflict: education_detail_on_conflict
+    ): education_detail_mutation_response
+    "insert a single row into the table: \"education_detail\""
+    insert_education_detail_one(
+        "the row to be inserted"
+        object: education_detail_insert_input!,
+        "on conflict condition"
+        on_conflict: education_detail_on_conflict
+    ): education_detail
+    "insert data into the table: \"experience_detail\""
+    insert_experience_detail(
+        "the rows to be inserted"
+        objects: [experience_detail_insert_input!]!,
+        "on conflict condition"
+        on_conflict: experience_detail_on_conflict
+    ): experience_detail_mutation_response
+    "insert a single row into the table: \"experience_detail\""
+    insert_experience_detail_one(
+        "the row to be inserted"
+        object: experience_detail_insert_input!,
+        "on conflict condition"
+        on_conflict: experience_detail_on_conflict
+    ): experience_detail
+    "insert data into the table: \"job_location\""
+    insert_job_location(
+        "the rows to be inserted"
+        objects: [job_location_insert_input!]!,
+        "on conflict condition"
+        on_conflict: job_location_on_conflict
+    ): job_location_mutation_response
+    "insert a single row into the table: \"job_location\""
+    insert_job_location_one(
+        "the row to be inserted"
+        object: job_location_insert_input!,
+        "on conflict condition"
+        on_conflict: job_location_on_conflict
+    ): job_location
+    "insert data into the table: \"job_post\""
+    insert_job_post(
+        "the rows to be inserted"
+        objects: [job_post_insert_input!]!,
+        "on conflict condition"
+        on_conflict: job_post_on_conflict
+    ): job_post_mutation_response
+    "insert data into the table: \"job_post_activity\""
+    insert_job_post_activity(
+        "the rows to be inserted"
+        objects: [job_post_activity_insert_input!]!,
+        "on conflict condition"
+        on_conflict: job_post_activity_on_conflict
+    ): job_post_activity_mutation_response
+    "insert a single row into the table: \"job_post_activity\""
+    insert_job_post_activity_one(
+        "the row to be inserted"
+        object: job_post_activity_insert_input!,
+        "on conflict condition"
+        on_conflict: job_post_activity_on_conflict
+    ): job_post_activity
+    "insert a single row into the table: \"job_post\""
+    insert_job_post_one(
+        "the row to be inserted"
+        object: job_post_insert_input!,
+        "on conflict condition"
+        on_conflict: job_post_on_conflict
+    ): job_post
+    "insert data into the table: \"job_post_skill_set\""
+    insert_job_post_skill_set(
+        "the rows to be inserted"
+        objects: [job_post_skill_set_insert_input!]!,
+        "on conflict condition"
+        on_conflict: job_post_skill_set_on_conflict
+    ): job_post_skill_set_mutation_response
+    "insert a single row into the table: \"job_post_skill_set\""
+    insert_job_post_skill_set_one(
+        "the row to be inserted"
+        object: job_post_skill_set_insert_input!,
+        "on conflict condition"
+        on_conflict: job_post_skill_set_on_conflict
+    ): job_post_skill_set
+    "insert data into the table: \"job_type\""
+    insert_job_type(
+        "the rows to be inserted"
+        objects: [job_type_insert_input!]!,
+        "on conflict condition"
+        on_conflict: job_type_on_conflict
+    ): job_type_mutation_response
+    "insert a single row into the table: \"job_type\""
+    insert_job_type_one(
+        "the row to be inserted"
+        object: job_type_insert_input!,
+        "on conflict condition"
+        on_conflict: job_type_on_conflict
+    ): job_type
+    "insert data into the table: \"seeker_profile\""
+    insert_seeker_profile(
+        "the rows to be inserted"
+        objects: [seeker_profile_insert_input!]!,
+        "on conflict condition"
+        on_conflict: seeker_profile_on_conflict
+    ): seeker_profile_mutation_response
+    "insert a single row into the table: \"seeker_profile\""
+    insert_seeker_profile_one(
+        "the row to be inserted"
+        object: seeker_profile_insert_input!,
+        "on conflict condition"
+        on_conflict: seeker_profile_on_conflict
+    ): seeker_profile
+    "insert data into the table: \"seeker_skill_set\""
+    insert_seeker_skill_set(
+        "the rows to be inserted"
+        objects: [seeker_skill_set_insert_input!]!,
+        "on conflict condition"
+        on_conflict: seeker_skill_set_on_conflict
+    ): seeker_skill_set_mutation_response
+    "insert a single row into the table: \"seeker_skill_set\""
+    insert_seeker_skill_set_one(
+        "the row to be inserted"
+        object: seeker_skill_set_insert_input!,
+        "on conflict condition"
+        on_conflict: seeker_skill_set_on_conflict
+    ): seeker_skill_set
+    "insert data into the table: \"skill_set\""
+    insert_skill_set(
+        "the rows to be inserted"
+        objects: [skill_set_insert_input!]!,
+        "on conflict condition"
+        on_conflict: skill_set_on_conflict
+    ): skill_set_mutation_response
+    "insert a single row into the table: \"skill_set\""
+    insert_skill_set_one(
+        "the row to be inserted"
+        object: skill_set_insert_input!,
+        "on conflict condition"
+        on_conflict: skill_set_on_conflict
+    ): skill_set
+    "insert data into the table: \"user_account\""
+    insert_user_account(
+        "the rows to be inserted"
+        objects: [user_account_insert_input!]!,
+        "on conflict condition"
+        on_conflict: user_account_on_conflict
+    ): user_account_mutation_response
+    "insert a single row into the table: \"user_account\""
+    insert_user_account_one(
+        "the row to be inserted"
+        object: user_account_insert_input!,
+        "on conflict condition"
+        on_conflict: user_account_on_conflict
+    ): user_account
+    "insert data into the table: \"user_log\""
+    insert_user_log(
+        "the rows to be inserted"
+        objects: [user_log_insert_input!]!,
+        "on conflict condition"
+        on_conflict: user_log_on_conflict
+    ): user_log_mutation_response
+    "insert a single row into the table: \"user_log\""
+    insert_user_log_one(
+        "the row to be inserted"
+        object: user_log_insert_input!,
+        "on conflict condition"
+        on_conflict: user_log_on_conflict
+    ): user_log
+    "insert data into the table: \"user_type\""
+    insert_user_type(
+        "the rows to be inserted"
+        objects: [user_type_insert_input!]!,
+        "on conflict condition"
+        on_conflict: user_type_on_conflict
+    ): user_type_mutation_response
+    "insert a single row into the table: \"user_type\""
+    insert_user_type_one(
+        "the row to be inserted"
+        object: user_type_insert_input!,
+        "on conflict condition"
+        on_conflict: user_type_on_conflict
+    ): user_type
+    "update data of the table: \"business_stream\""
+    update_business_stream(
+        "increments the integer columns with given value of the filtered values"
+        _inc: business_stream_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: business_stream_set_input,
+        "filter the rows which have to be updated"
+        where: business_stream_bool_exp!
+    ): business_stream_mutation_response
+    "update single row of the table: \"business_stream\""
+    update_business_stream_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: business_stream_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: business_stream_set_input,
+        pk_columns: business_stream_pk_columns_input!
+    ): business_stream
+    "update data of the table: \"company\""
+    update_company(
+        "increments the integer columns with given value of the filtered values"
+        _inc: company_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: company_set_input,
+        "filter the rows which have to be updated"
+        where: company_bool_exp!
+    ): company_mutation_response
+    "update single row of the table: \"company\""
+    update_company_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: company_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: company_set_input,
+        pk_columns: company_pk_columns_input!
+    ): company
+    "update data of the table: \"company_image\""
+    update_company_image(
+        "increments the integer columns with given value of the filtered values"
+        _inc: company_image_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: company_image_set_input,
+        "filter the rows which have to be updated"
+        where: company_image_bool_exp!
+    ): company_image_mutation_response
+    "update single row of the table: \"company_image\""
+    update_company_image_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: company_image_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: company_image_set_input,
+        pk_columns: company_image_pk_columns_input!
+    ): company_image
+    "update data of the table: \"education_detail\""
+    update_education_detail(
+        "increments the integer columns with given value of the filtered values"
+        _inc: education_detail_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: education_detail_set_input,
+        "filter the rows which have to be updated"
+        where: education_detail_bool_exp!
+    ): education_detail_mutation_response
+    "update single row of the table: \"education_detail\""
+    update_education_detail_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: education_detail_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: education_detail_set_input,
+        pk_columns: education_detail_pk_columns_input!
+    ): education_detail
+    "update data of the table: \"experience_detail\""
+    update_experience_detail(
+        "increments the integer columns with given value of the filtered values"
+        _inc: experience_detail_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: experience_detail_set_input,
+        "filter the rows which have to be updated"
+        where: experience_detail_bool_exp!
+    ): experience_detail_mutation_response
+    "update single row of the table: \"experience_detail\""
+    update_experience_detail_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: experience_detail_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: experience_detail_set_input,
+        pk_columns: experience_detail_pk_columns_input!
+    ): experience_detail
+    "update data of the table: \"job_location\""
+    update_job_location(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_location_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_location_set_input,
+        "filter the rows which have to be updated"
+        where: job_location_bool_exp!
+    ): job_location_mutation_response
+    "update single row of the table: \"job_location\""
+    update_job_location_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_location_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_location_set_input,
+        pk_columns: job_location_pk_columns_input!
+    ): job_location
+    "update data of the table: \"job_post\""
+    update_job_post(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_set_input,
+        "filter the rows which have to be updated"
+        where: job_post_bool_exp!
+    ): job_post_mutation_response
+    "update data of the table: \"job_post_activity\""
+    update_job_post_activity(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_activity_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_activity_set_input,
+        "filter the rows which have to be updated"
+        where: job_post_activity_bool_exp!
+    ): job_post_activity_mutation_response
+    "update single row of the table: \"job_post_activity\""
+    update_job_post_activity_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_activity_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_activity_set_input,
+        pk_columns: job_post_activity_pk_columns_input!
+    ): job_post_activity
+    "update single row of the table: \"job_post\""
+    update_job_post_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_set_input,
+        pk_columns: job_post_pk_columns_input!
+    ): job_post
+    "update data of the table: \"job_post_skill_set\""
+    update_job_post_skill_set(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_skill_set_set_input,
+        "filter the rows which have to be updated"
+        where: job_post_skill_set_bool_exp!
+    ): job_post_skill_set_mutation_response
+    "update single row of the table: \"job_post_skill_set\""
+    update_job_post_skill_set_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_post_skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_post_skill_set_set_input,
+        pk_columns: job_post_skill_set_pk_columns_input!
+    ): job_post_skill_set
+    "update data of the table: \"job_type\""
+    update_job_type(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_type_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_type_set_input,
+        "filter the rows which have to be updated"
+        where: job_type_bool_exp!
+    ): job_type_mutation_response
+    "update single row of the table: \"job_type\""
+    update_job_type_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: job_type_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: job_type_set_input,
+        pk_columns: job_type_pk_columns_input!
+    ): job_type
+    "update data of the table: \"seeker_profile\""
+    update_seeker_profile(
+        "increments the integer columns with given value of the filtered values"
+        _inc: seeker_profile_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: seeker_profile_set_input,
+        "filter the rows which have to be updated"
+        where: seeker_profile_bool_exp!
+    ): seeker_profile_mutation_response
+    "update single row of the table: \"seeker_profile\""
+    update_seeker_profile_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: seeker_profile_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: seeker_profile_set_input,
+        pk_columns: seeker_profile_pk_columns_input!
+    ): seeker_profile
+    "update data of the table: \"seeker_skill_set\""
+    update_seeker_skill_set(
+        "increments the integer columns with given value of the filtered values"
+        _inc: seeker_skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: seeker_skill_set_set_input,
+        "filter the rows which have to be updated"
+        where: seeker_skill_set_bool_exp!
+    ): seeker_skill_set_mutation_response
+    "update single row of the table: \"seeker_skill_set\""
+    update_seeker_skill_set_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: seeker_skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: seeker_skill_set_set_input,
+        pk_columns: seeker_skill_set_pk_columns_input!
+    ): seeker_skill_set
+    "update data of the table: \"skill_set\""
+    update_skill_set(
+        "increments the integer columns with given value of the filtered values"
+        _inc: skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: skill_set_set_input,
+        "filter the rows which have to be updated"
+        where: skill_set_bool_exp!
+    ): skill_set_mutation_response
+    "update single row of the table: \"skill_set\""
+    update_skill_set_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: skill_set_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: skill_set_set_input,
+        pk_columns: skill_set_pk_columns_input!
+    ): skill_set
+    "update data of the table: \"user_account\""
+    update_user_account(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_account_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_account_set_input,
+        "filter the rows which have to be updated"
+        where: user_account_bool_exp!
+    ): user_account_mutation_response
+    "update single row of the table: \"user_account\""
+    update_user_account_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_account_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_account_set_input,
+        pk_columns: user_account_pk_columns_input!
+    ): user_account
+    "update data of the table: \"user_log\""
+    update_user_log(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_log_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_log_set_input,
+        "filter the rows which have to be updated"
+        where: user_log_bool_exp!
+    ): user_log_mutation_response
+    "update single row of the table: \"user_log\""
+    update_user_log_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_log_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_log_set_input,
+        pk_columns: user_log_pk_columns_input!
+    ): user_log
+    "update data of the table: \"user_type\""
+    update_user_type(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_type_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_type_set_input,
+        "filter the rows which have to be updated"
+        where: user_type_bool_exp!
+    ): user_type_mutation_response
+    "update single row of the table: \"user_type\""
+    update_user_type_by_pk(
+        "increments the integer columns with given value of the filtered values"
+        _inc: user_type_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: user_type_set_input,
+        pk_columns: user_type_pk_columns_input!
+    ): user_type
+}
+
+"query root"
+type query_root {
+    "fetch data from the table: \"business_stream\""
+    businessStream(
+        "distinct select on columns"
+        distinct_on: [business_stream_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [business_stream_order_by!],
+        "filter the rows returned"
+        where: business_stream_bool_exp
+    ): [business_stream!]!
+    "fetch aggregated fields from the table: \"business_stream\""
+    business_stream_aggregate(
+        "distinct select on columns"
+        distinct_on: [business_stream_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [business_stream_order_by!],
+        "filter the rows returned"
+        where: business_stream_bool_exp
+    ): business_stream_aggregate!
+    "fetch data from the table: \"business_stream\" using primary key columns"
+    business_stream_by_pk(id: Int!): business_stream
+    "fetch data from the table: \"company\""
+    company(
+        "distinct select on columns"
+        distinct_on: [company_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_order_by!],
+        "filter the rows returned"
+        where: company_bool_exp
+    ): [company!]!
+    "fetch data from the table: \"company_image\""
+    companyImage(
+        "distinct select on columns"
+        distinct_on: [company_image_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_image_order_by!],
+        "filter the rows returned"
+        where: company_image_bool_exp
+    ): [company_image!]!
+    "fetch aggregated fields from the table: \"company\""
+    company_aggregate(
+        "distinct select on columns"
+        distinct_on: [company_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_order_by!],
+        "filter the rows returned"
+        where: company_bool_exp
+    ): company_aggregate!
+    "fetch data from the table: \"company\" using primary key columns"
+    company_by_pk(id: Int!): company
+    "fetch aggregated fields from the table: \"company_image\""
+    company_image_aggregate(
+        "distinct select on columns"
+        distinct_on: [company_image_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_image_order_by!],
+        "filter the rows returned"
+        where: company_image_bool_exp
+    ): company_image_aggregate!
+    "fetch data from the table: \"company_image\" using primary key columns"
+    company_image_by_pk(id: Int!): company_image
+    "fetch data from the table: \"education_detail\""
+    education_detail(
+        "distinct select on columns"
+        distinct_on: [education_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [education_detail_order_by!],
+        "filter the rows returned"
+        where: education_detail_bool_exp
+    ): [education_detail!]!
+    "fetch aggregated fields from the table: \"education_detail\""
+    education_detail_aggregate(
+        "distinct select on columns"
+        distinct_on: [education_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [education_detail_order_by!],
+        "filter the rows returned"
+        where: education_detail_bool_exp
+    ): education_detail_aggregate!
+    "fetch data from the table: \"education_detail\" using primary key columns"
+    education_detail_by_pk(certificateDegreeName: String!, major: String!, userAccountId: Int!): education_detail
+    "fetch data from the table: \"experience_detail\""
+    experience_detail(
+        "distinct select on columns"
+        distinct_on: [experience_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [experience_detail_order_by!],
+        "filter the rows returned"
+        where: experience_detail_bool_exp
+    ): [experience_detail!]!
+    "fetch aggregated fields from the table: \"experience_detail\""
+    experience_detail_aggregate(
+        "distinct select on columns"
+        distinct_on: [experience_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [experience_detail_order_by!],
+        "filter the rows returned"
+        where: experience_detail_bool_exp
+    ): experience_detail_aggregate!
+    "fetch data from the table: \"experience_detail\" using primary key columns"
+    experience_detail_by_pk(endDate: date!, startDate: date!, userAccountId: Int!): experience_detail
+    "fetch data from the table: \"job_location\""
+    job_location(
+        "distinct select on columns"
+        distinct_on: [job_location_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_location_order_by!],
+        "filter the rows returned"
+        where: job_location_bool_exp
+    ): [job_location!]!
+    "fetch aggregated fields from the table: \"job_location\""
+    job_location_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_location_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_location_order_by!],
+        "filter the rows returned"
+        where: job_location_bool_exp
+    ): job_location_aggregate!
+    "fetch data from the table: \"job_location\" using primary key columns"
+    job_location_by_pk(id: Int!): job_location
+    "fetch data from the table: \"job_post\""
+    job_post(
+        "distinct select on columns"
+        distinct_on: [job_post_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_order_by!],
+        "filter the rows returned"
+        where: job_post_bool_exp
+    ): [job_post!]!
+    "fetch data from the table: \"job_post_activity\""
+    job_post_activity(
+        "distinct select on columns"
+        distinct_on: [job_post_activity_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_activity_order_by!],
+        "filter the rows returned"
+        where: job_post_activity_bool_exp
+    ): [job_post_activity!]!
+    "fetch aggregated fields from the table: \"job_post_activity\""
+    job_post_activity_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_activity_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_activity_order_by!],
+        "filter the rows returned"
+        where: job_post_activity_bool_exp
+    ): job_post_activity_aggregate!
+    "fetch data from the table: \"job_post_activity\" using primary key columns"
+    job_post_activity_by_pk(jobPostId: Int!, userAccountId: Int!): job_post_activity
+    "fetch aggregated fields from the table: \"job_post\""
+    job_post_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_order_by!],
+        "filter the rows returned"
+        where: job_post_bool_exp
+    ): job_post_aggregate!
+    "fetch data from the table: \"job_post\" using primary key columns"
+    job_post_by_pk(id: Int!): job_post
+    "fetch data from the table: \"job_post_skill_set\""
+    job_post_skill_set(
+        "distinct select on columns"
+        distinct_on: [job_post_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_skill_set_order_by!],
+        "filter the rows returned"
+        where: job_post_skill_set_bool_exp
+    ): [job_post_skill_set!]!
+    "fetch aggregated fields from the table: \"job_post_skill_set\""
+    job_post_skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_skill_set_order_by!],
+        "filter the rows returned"
+        where: job_post_skill_set_bool_exp
+    ): job_post_skill_set_aggregate!
+    "fetch data from the table: \"job_post_skill_set\" using primary key columns"
+    job_post_skill_set_by_pk(jobPostId: Int!, skillSetId: Int!): job_post_skill_set
+    "fetch data from the table: \"job_type\""
+    job_type(
+        "distinct select on columns"
+        distinct_on: [job_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_type_order_by!],
+        "filter the rows returned"
+        where: job_type_bool_exp
+    ): [job_type!]!
+    "fetch aggregated fields from the table: \"job_type\""
+    job_type_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_type_order_by!],
+        "filter the rows returned"
+        where: job_type_bool_exp
+    ): job_type_aggregate!
+    "fetch data from the table: \"job_type\" using primary key columns"
+    job_type_by_pk(id: Int!): job_type
+    "fetch data from the table: \"seeker_profile\""
+    seeker_profile(
+        "distinct select on columns"
+        distinct_on: [seeker_profile_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_profile_order_by!],
+        "filter the rows returned"
+        where: seeker_profile_bool_exp
+    ): [seeker_profile!]!
+    "fetch aggregated fields from the table: \"seeker_profile\""
+    seeker_profile_aggregate(
+        "distinct select on columns"
+        distinct_on: [seeker_profile_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_profile_order_by!],
+        "filter the rows returned"
+        where: seeker_profile_bool_exp
+    ): seeker_profile_aggregate!
+    "fetch data from the table: \"seeker_profile\" using primary key columns"
+    seeker_profile_by_pk(userAccountId: Int!): seeker_profile
+    "fetch data from the table: \"seeker_skill_set\""
+    seeker_skill_set(
+        "distinct select on columns"
+        distinct_on: [seeker_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_skill_set_order_by!],
+        "filter the rows returned"
+        where: seeker_skill_set_bool_exp
+    ): [seeker_skill_set!]!
+    "fetch aggregated fields from the table: \"seeker_skill_set\""
+    seeker_skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [seeker_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_skill_set_order_by!],
+        "filter the rows returned"
+        where: seeker_skill_set_bool_exp
+    ): seeker_skill_set_aggregate!
+    "fetch data from the table: \"seeker_skill_set\" using primary key columns"
+    seeker_skill_set_by_pk(skillSetId: Int!, userAccountId: Int!): seeker_skill_set
+    "fetch data from the table: \"skill_set\""
+    skill_set(
+        "distinct select on columns"
+        distinct_on: [skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [skill_set_order_by!],
+        "filter the rows returned"
+        where: skill_set_bool_exp
+    ): [skill_set!]!
+    "fetch aggregated fields from the table: \"skill_set\""
+    skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [skill_set_order_by!],
+        "filter the rows returned"
+        where: skill_set_bool_exp
+    ): skill_set_aggregate!
+    "fetch data from the table: \"skill_set\" using primary key columns"
+    skill_set_by_pk(id: Int!): skill_set
+    "fetch data from the table: \"user_account\""
+    user_account(
+        "distinct select on columns"
+        distinct_on: [user_account_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_account_order_by!],
+        "filter the rows returned"
+        where: user_account_bool_exp
+    ): [user_account!]!
+    "fetch aggregated fields from the table: \"user_account\""
+    user_account_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_account_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_account_order_by!],
+        "filter the rows returned"
+        where: user_account_bool_exp
+    ): user_account_aggregate!
+    "fetch data from the table: \"user_account\" using primary key columns"
+    user_account_by_pk(id: Int!): user_account
+    "fetch data from the table: \"user_log\""
+    user_log(
+        "distinct select on columns"
+        distinct_on: [user_log_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_log_order_by!],
+        "filter the rows returned"
+        where: user_log_bool_exp
+    ): [user_log!]!
+    "fetch aggregated fields from the table: \"user_log\""
+    user_log_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_log_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_log_order_by!],
+        "filter the rows returned"
+        where: user_log_bool_exp
+    ): user_log_aggregate!
+    "fetch data from the table: \"user_log\" using primary key columns"
+    user_log_by_pk(userAccountId: Int!): user_log
+    "fetch data from the table: \"user_type\""
+    user_type(
+        "distinct select on columns"
+        distinct_on: [user_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_type_order_by!],
+        "filter the rows returned"
+        where: user_type_bool_exp
+    ): [user_type!]!
+    "fetch aggregated fields from the table: \"user_type\""
+    user_type_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_type_order_by!],
+        "filter the rows returned"
+        where: user_type_bool_exp
+    ): user_type_aggregate!
+    "fetch data from the table: \"user_type\" using primary key columns"
+    user_type_by_pk(id: Int!): user_type
+}
+
+"columns and relationships of \"seeker_profile\""
+type seeker_profile {
+    currency: String
+    currentSalary: Int
+    firstName: String!
+    isAnnuallyMonthly: bpchar
+    lastName: String!
+    "An object relationship"
+    userAccount: user_account!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"seeker_profile\""
+type seeker_profile_aggregate {
+    aggregate: seeker_profile_aggregate_fields
+    nodes: [seeker_profile!]!
+}
+
+"aggregate fields of \"seeker_profile\""
+type seeker_profile_aggregate_fields {
+    avg: seeker_profile_avg_fields
+    count(columns: [seeker_profile_select_column!], distinct: Boolean): Int
+    max: seeker_profile_max_fields
+    min: seeker_profile_min_fields
+    stddev: seeker_profile_stddev_fields
+    stddev_pop: seeker_profile_stddev_pop_fields
+    stddev_samp: seeker_profile_stddev_samp_fields
+    sum: seeker_profile_sum_fields
+    var_pop: seeker_profile_var_pop_fields
+    var_samp: seeker_profile_var_samp_fields
+    variance: seeker_profile_variance_fields
+}
+
+"aggregate avg on columns"
+type seeker_profile_avg_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type seeker_profile_max_fields {
+    currency: String
+    currentSalary: Int
+    firstName: String
+    lastName: String
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type seeker_profile_min_fields {
+    currency: String
+    currentSalary: Int
+    firstName: String
+    lastName: String
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"seeker_profile\""
+type seeker_profile_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [seeker_profile!]!
+}
+
+"aggregate stddev on columns"
+type seeker_profile_stddev_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type seeker_profile_stddev_pop_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type seeker_profile_stddev_samp_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type seeker_profile_sum_fields {
+    currentSalary: Int
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type seeker_profile_var_pop_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type seeker_profile_var_samp_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type seeker_profile_variance_fields {
+    currentSalary: Float
+    userAccountId: Float
+}
+
+"columns and relationships of \"seeker_skill_set\""
+type seeker_skill_set {
+    "An object relationship"
+    seekerProfile: seeker_profile!
+    skillLevel: Int!
+    "An object relationship"
+    skillSet: skill_set!
+    skillSetId: Int!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"seeker_skill_set\""
+type seeker_skill_set_aggregate {
+    aggregate: seeker_skill_set_aggregate_fields
+    nodes: [seeker_skill_set!]!
+}
+
+"aggregate fields of \"seeker_skill_set\""
+type seeker_skill_set_aggregate_fields {
+    avg: seeker_skill_set_avg_fields
+    count(columns: [seeker_skill_set_select_column!], distinct: Boolean): Int
+    max: seeker_skill_set_max_fields
+    min: seeker_skill_set_min_fields
+    stddev: seeker_skill_set_stddev_fields
+    stddev_pop: seeker_skill_set_stddev_pop_fields
+    stddev_samp: seeker_skill_set_stddev_samp_fields
+    sum: seeker_skill_set_sum_fields
+    var_pop: seeker_skill_set_var_pop_fields
+    var_samp: seeker_skill_set_var_samp_fields
+    variance: seeker_skill_set_variance_fields
+}
+
+"aggregate avg on columns"
+type seeker_skill_set_avg_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type seeker_skill_set_max_fields {
+    skillLevel: Int
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type seeker_skill_set_min_fields {
+    skillLevel: Int
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"seeker_skill_set\""
+type seeker_skill_set_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [seeker_skill_set!]!
+}
+
+"aggregate stddev on columns"
+type seeker_skill_set_stddev_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type seeker_skill_set_stddev_pop_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type seeker_skill_set_stddev_samp_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type seeker_skill_set_sum_fields {
+    skillLevel: Int
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type seeker_skill_set_var_pop_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type seeker_skill_set_var_samp_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type seeker_skill_set_variance_fields {
+    skillLevel: Float
+    skillSetId: Float
+    userAccountId: Float
+}
+
+"columns and relationships of \"skill_set\""
+type skill_set {
+    id: Int!
+    skillSetName: String!
+}
+
+"aggregated selection of \"skill_set\""
+type skill_set_aggregate {
+    aggregate: skill_set_aggregate_fields
+    nodes: [skill_set!]!
+}
+
+"aggregate fields of \"skill_set\""
+type skill_set_aggregate_fields {
+    avg: skill_set_avg_fields
+    count(columns: [skill_set_select_column!], distinct: Boolean): Int
+    max: skill_set_max_fields
+    min: skill_set_min_fields
+    stddev: skill_set_stddev_fields
+    stddev_pop: skill_set_stddev_pop_fields
+    stddev_samp: skill_set_stddev_samp_fields
+    sum: skill_set_sum_fields
+    var_pop: skill_set_var_pop_fields
+    var_samp: skill_set_var_samp_fields
+    variance: skill_set_variance_fields
+}
+
+"aggregate avg on columns"
+type skill_set_avg_fields {
+    id: Float
+}
+
+"aggregate max on columns"
+type skill_set_max_fields {
+    id: Int
+    skillSetName: String
+}
+
+"aggregate min on columns"
+type skill_set_min_fields {
+    id: Int
+    skillSetName: String
+}
+
+"response of any mutation on the table \"skill_set\""
+type skill_set_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [skill_set!]!
+}
+
+"aggregate stddev on columns"
+type skill_set_stddev_fields {
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type skill_set_stddev_pop_fields {
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type skill_set_stddev_samp_fields {
+    id: Float
+}
+
+"aggregate sum on columns"
+type skill_set_sum_fields {
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type skill_set_var_pop_fields {
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type skill_set_var_samp_fields {
+    id: Float
+}
+
+"aggregate variance on columns"
+type skill_set_variance_fields {
+    id: Float
+}
+
+"subscription root"
+type subscription_root {
+    "fetch data from the table: \"business_stream\""
+    businessStream(
+        "distinct select on columns"
+        distinct_on: [business_stream_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [business_stream_order_by!],
+        "filter the rows returned"
+        where: business_stream_bool_exp
+    ): [business_stream!]!
+    "fetch aggregated fields from the table: \"business_stream\""
+    business_stream_aggregate(
+        "distinct select on columns"
+        distinct_on: [business_stream_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [business_stream_order_by!],
+        "filter the rows returned"
+        where: business_stream_bool_exp
+    ): business_stream_aggregate!
+    "fetch data from the table: \"business_stream\" using primary key columns"
+    business_stream_by_pk(id: Int!): business_stream
+    "fetch data from the table: \"company\""
+    company(
+        "distinct select on columns"
+        distinct_on: [company_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_order_by!],
+        "filter the rows returned"
+        where: company_bool_exp
+    ): [company!]!
+    "fetch data from the table: \"company_image\""
+    companyImage(
+        "distinct select on columns"
+        distinct_on: [company_image_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_image_order_by!],
+        "filter the rows returned"
+        where: company_image_bool_exp
+    ): [company_image!]!
+    "fetch aggregated fields from the table: \"company\""
+    company_aggregate(
+        "distinct select on columns"
+        distinct_on: [company_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_order_by!],
+        "filter the rows returned"
+        where: company_bool_exp
+    ): company_aggregate!
+    "fetch data from the table: \"company\" using primary key columns"
+    company_by_pk(id: Int!): company
+    "fetch aggregated fields from the table: \"company_image\""
+    company_image_aggregate(
+        "distinct select on columns"
+        distinct_on: [company_image_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [company_image_order_by!],
+        "filter the rows returned"
+        where: company_image_bool_exp
+    ): company_image_aggregate!
+    "fetch data from the table: \"company_image\" using primary key columns"
+    company_image_by_pk(id: Int!): company_image
+    "fetch data from the table: \"education_detail\""
+    education_detail(
+        "distinct select on columns"
+        distinct_on: [education_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [education_detail_order_by!],
+        "filter the rows returned"
+        where: education_detail_bool_exp
+    ): [education_detail!]!
+    "fetch aggregated fields from the table: \"education_detail\""
+    education_detail_aggregate(
+        "distinct select on columns"
+        distinct_on: [education_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [education_detail_order_by!],
+        "filter the rows returned"
+        where: education_detail_bool_exp
+    ): education_detail_aggregate!
+    "fetch data from the table: \"education_detail\" using primary key columns"
+    education_detail_by_pk(certificateDegreeName: String!, major: String!, userAccountId: Int!): education_detail
+    "fetch data from the table: \"experience_detail\""
+    experience_detail(
+        "distinct select on columns"
+        distinct_on: [experience_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [experience_detail_order_by!],
+        "filter the rows returned"
+        where: experience_detail_bool_exp
+    ): [experience_detail!]!
+    "fetch aggregated fields from the table: \"experience_detail\""
+    experience_detail_aggregate(
+        "distinct select on columns"
+        distinct_on: [experience_detail_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [experience_detail_order_by!],
+        "filter the rows returned"
+        where: experience_detail_bool_exp
+    ): experience_detail_aggregate!
+    "fetch data from the table: \"experience_detail\" using primary key columns"
+    experience_detail_by_pk(endDate: date!, startDate: date!, userAccountId: Int!): experience_detail
+    "fetch data from the table: \"job_location\""
+    job_location(
+        "distinct select on columns"
+        distinct_on: [job_location_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_location_order_by!],
+        "filter the rows returned"
+        where: job_location_bool_exp
+    ): [job_location!]!
+    "fetch aggregated fields from the table: \"job_location\""
+    job_location_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_location_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_location_order_by!],
+        "filter the rows returned"
+        where: job_location_bool_exp
+    ): job_location_aggregate!
+    "fetch data from the table: \"job_location\" using primary key columns"
+    job_location_by_pk(id: Int!): job_location
+    "fetch data from the table: \"job_post\""
+    job_post(
+        "distinct select on columns"
+        distinct_on: [job_post_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_order_by!],
+        "filter the rows returned"
+        where: job_post_bool_exp
+    ): [job_post!]!
+    "fetch data from the table: \"job_post_activity\""
+    job_post_activity(
+        "distinct select on columns"
+        distinct_on: [job_post_activity_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_activity_order_by!],
+        "filter the rows returned"
+        where: job_post_activity_bool_exp
+    ): [job_post_activity!]!
+    "fetch aggregated fields from the table: \"job_post_activity\""
+    job_post_activity_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_activity_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_activity_order_by!],
+        "filter the rows returned"
+        where: job_post_activity_bool_exp
+    ): job_post_activity_aggregate!
+    "fetch data from the table: \"job_post_activity\" using primary key columns"
+    job_post_activity_by_pk(jobPostId: Int!, userAccountId: Int!): job_post_activity
+    "fetch aggregated fields from the table: \"job_post\""
+    job_post_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_order_by!],
+        "filter the rows returned"
+        where: job_post_bool_exp
+    ): job_post_aggregate!
+    "fetch data from the table: \"job_post\" using primary key columns"
+    job_post_by_pk(id: Int!): job_post
+    "fetch data from the table: \"job_post_skill_set\""
+    job_post_skill_set(
+        "distinct select on columns"
+        distinct_on: [job_post_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_skill_set_order_by!],
+        "filter the rows returned"
+        where: job_post_skill_set_bool_exp
+    ): [job_post_skill_set!]!
+    "fetch aggregated fields from the table: \"job_post_skill_set\""
+    job_post_skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_post_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_post_skill_set_order_by!],
+        "filter the rows returned"
+        where: job_post_skill_set_bool_exp
+    ): job_post_skill_set_aggregate!
+    "fetch data from the table: \"job_post_skill_set\" using primary key columns"
+    job_post_skill_set_by_pk(jobPostId: Int!, skillSetId: Int!): job_post_skill_set
+    "fetch data from the table: \"job_type\""
+    job_type(
+        "distinct select on columns"
+        distinct_on: [job_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_type_order_by!],
+        "filter the rows returned"
+        where: job_type_bool_exp
+    ): [job_type!]!
+    "fetch aggregated fields from the table: \"job_type\""
+    job_type_aggregate(
+        "distinct select on columns"
+        distinct_on: [job_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [job_type_order_by!],
+        "filter the rows returned"
+        where: job_type_bool_exp
+    ): job_type_aggregate!
+    "fetch data from the table: \"job_type\" using primary key columns"
+    job_type_by_pk(id: Int!): job_type
+    "fetch data from the table: \"seeker_profile\""
+    seeker_profile(
+        "distinct select on columns"
+        distinct_on: [seeker_profile_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_profile_order_by!],
+        "filter the rows returned"
+        where: seeker_profile_bool_exp
+    ): [seeker_profile!]!
+    "fetch aggregated fields from the table: \"seeker_profile\""
+    seeker_profile_aggregate(
+        "distinct select on columns"
+        distinct_on: [seeker_profile_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_profile_order_by!],
+        "filter the rows returned"
+        where: seeker_profile_bool_exp
+    ): seeker_profile_aggregate!
+    "fetch data from the table: \"seeker_profile\" using primary key columns"
+    seeker_profile_by_pk(userAccountId: Int!): seeker_profile
+    "fetch data from the table: \"seeker_skill_set\""
+    seeker_skill_set(
+        "distinct select on columns"
+        distinct_on: [seeker_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_skill_set_order_by!],
+        "filter the rows returned"
+        where: seeker_skill_set_bool_exp
+    ): [seeker_skill_set!]!
+    "fetch aggregated fields from the table: \"seeker_skill_set\""
+    seeker_skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [seeker_skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [seeker_skill_set_order_by!],
+        "filter the rows returned"
+        where: seeker_skill_set_bool_exp
+    ): seeker_skill_set_aggregate!
+    "fetch data from the table: \"seeker_skill_set\" using primary key columns"
+    seeker_skill_set_by_pk(skillSetId: Int!, userAccountId: Int!): seeker_skill_set
+    "fetch data from the table: \"skill_set\""
+    skill_set(
+        "distinct select on columns"
+        distinct_on: [skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [skill_set_order_by!],
+        "filter the rows returned"
+        where: skill_set_bool_exp
+    ): [skill_set!]!
+    "fetch aggregated fields from the table: \"skill_set\""
+    skill_set_aggregate(
+        "distinct select on columns"
+        distinct_on: [skill_set_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [skill_set_order_by!],
+        "filter the rows returned"
+        where: skill_set_bool_exp
+    ): skill_set_aggregate!
+    "fetch data from the table: \"skill_set\" using primary key columns"
+    skill_set_by_pk(id: Int!): skill_set
+    "fetch data from the table: \"user_account\""
+    user_account(
+        "distinct select on columns"
+        distinct_on: [user_account_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_account_order_by!],
+        "filter the rows returned"
+        where: user_account_bool_exp
+    ): [user_account!]!
+    "fetch aggregated fields from the table: \"user_account\""
+    user_account_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_account_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_account_order_by!],
+        "filter the rows returned"
+        where: user_account_bool_exp
+    ): user_account_aggregate!
+    "fetch data from the table: \"user_account\" using primary key columns"
+    user_account_by_pk(id: Int!): user_account
+    "fetch data from the table: \"user_log\""
+    user_log(
+        "distinct select on columns"
+        distinct_on: [user_log_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_log_order_by!],
+        "filter the rows returned"
+        where: user_log_bool_exp
+    ): [user_log!]!
+    "fetch aggregated fields from the table: \"user_log\""
+    user_log_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_log_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_log_order_by!],
+        "filter the rows returned"
+        where: user_log_bool_exp
+    ): user_log_aggregate!
+    "fetch data from the table: \"user_log\" using primary key columns"
+    user_log_by_pk(userAccountId: Int!): user_log
+    "fetch data from the table: \"user_type\""
+    user_type(
+        "distinct select on columns"
+        distinct_on: [user_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_type_order_by!],
+        "filter the rows returned"
+        where: user_type_bool_exp
+    ): [user_type!]!
+    "fetch aggregated fields from the table: \"user_type\""
+    user_type_aggregate(
+        "distinct select on columns"
+        distinct_on: [user_type_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [user_type_order_by!],
+        "filter the rows returned"
+        where: user_type_bool_exp
+    ): user_type_aggregate!
+    "fetch data from the table: \"user_type\" using primary key columns"
+    user_type_by_pk(id: Int!): user_type
+}
+
+"columns and relationships of \"user_account\""
+type user_account {
+    contactNumber: Int!
+    dateOfBirth: date!
+    email: String!
+    emailNotificationActive: Boolean!
+    gender: bpchar!
+    id: Int!
+    isActive: Boolean!
+    password: String!
+    registrationDate: date!
+    smsNotificationActive: Boolean!
+    userImage: String!
+    "An object relationship"
+    userType: user_type!
+    userTypeId: Int!
+}
+
+"aggregated selection of \"user_account\""
+type user_account_aggregate {
+    aggregate: user_account_aggregate_fields
+    nodes: [user_account!]!
+}
+
+"aggregate fields of \"user_account\""
+type user_account_aggregate_fields {
+    avg: user_account_avg_fields
+    count(columns: [user_account_select_column!], distinct: Boolean): Int
+    max: user_account_max_fields
+    min: user_account_min_fields
+    stddev: user_account_stddev_fields
+    stddev_pop: user_account_stddev_pop_fields
+    stddev_samp: user_account_stddev_samp_fields
+    sum: user_account_sum_fields
+    var_pop: user_account_var_pop_fields
+    var_samp: user_account_var_samp_fields
+    variance: user_account_variance_fields
+}
+
+"aggregate avg on columns"
+type user_account_avg_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate max on columns"
+type user_account_max_fields {
+    contactNumber: Int
+    dateOfBirth: date
+    email: String
+    id: Int
+    password: String
+    registrationDate: date
+    userImage: String
+    userTypeId: Int
+}
+
+"aggregate min on columns"
+type user_account_min_fields {
+    contactNumber: Int
+    dateOfBirth: date
+    email: String
+    id: Int
+    password: String
+    registrationDate: date
+    userImage: String
+    userTypeId: Int
+}
+
+"response of any mutation on the table \"user_account\""
+type user_account_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [user_account!]!
+}
+
+"aggregate stddev on columns"
+type user_account_stddev_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate stddev_pop on columns"
+type user_account_stddev_pop_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate stddev_samp on columns"
+type user_account_stddev_samp_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate sum on columns"
+type user_account_sum_fields {
+    contactNumber: Int
+    id: Int
+    userTypeId: Int
+}
+
+"aggregate var_pop on columns"
+type user_account_var_pop_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate var_samp on columns"
+type user_account_var_samp_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"aggregate variance on columns"
+type user_account_variance_fields {
+    contactNumber: Float
+    id: Float
+    userTypeId: Float
+}
+
+"columns and relationships of \"user_log\""
+type user_log {
+    lastJobApplyDate: date
+    lastLoginDate: date!
+    "An object relationship"
+    userAccount: user_account!
+    userAccountId: Int!
+}
+
+"aggregated selection of \"user_log\""
+type user_log_aggregate {
+    aggregate: user_log_aggregate_fields
+    nodes: [user_log!]!
+}
+
+"aggregate fields of \"user_log\""
+type user_log_aggregate_fields {
+    avg: user_log_avg_fields
+    count(columns: [user_log_select_column!], distinct: Boolean): Int
+    max: user_log_max_fields
+    min: user_log_min_fields
+    stddev: user_log_stddev_fields
+    stddev_pop: user_log_stddev_pop_fields
+    stddev_samp: user_log_stddev_samp_fields
+    sum: user_log_sum_fields
+    var_pop: user_log_var_pop_fields
+    var_samp: user_log_var_samp_fields
+    variance: user_log_variance_fields
+}
+
+"aggregate avg on columns"
+type user_log_avg_fields {
+    userAccountId: Float
+}
+
+"aggregate max on columns"
+type user_log_max_fields {
+    lastJobApplyDate: date
+    lastLoginDate: date
+    userAccountId: Int
+}
+
+"aggregate min on columns"
+type user_log_min_fields {
+    lastJobApplyDate: date
+    lastLoginDate: date
+    userAccountId: Int
+}
+
+"response of any mutation on the table \"user_log\""
+type user_log_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [user_log!]!
+}
+
+"aggregate stddev on columns"
+type user_log_stddev_fields {
+    userAccountId: Float
+}
+
+"aggregate stddev_pop on columns"
+type user_log_stddev_pop_fields {
+    userAccountId: Float
+}
+
+"aggregate stddev_samp on columns"
+type user_log_stddev_samp_fields {
+    userAccountId: Float
+}
+
+"aggregate sum on columns"
+type user_log_sum_fields {
+    userAccountId: Int
+}
+
+"aggregate var_pop on columns"
+type user_log_var_pop_fields {
+    userAccountId: Float
+}
+
+"aggregate var_samp on columns"
+type user_log_var_samp_fields {
+    userAccountId: Float
+}
+
+"aggregate variance on columns"
+type user_log_variance_fields {
+    userAccountId: Float
+}
+
+"columns and relationships of \"user_type\""
+type user_type {
+    id: Int!
+    userTypeName: String!
+}
+
+"aggregated selection of \"user_type\""
+type user_type_aggregate {
+    aggregate: user_type_aggregate_fields
+    nodes: [user_type!]!
+}
+
+"aggregate fields of \"user_type\""
+type user_type_aggregate_fields {
+    avg: user_type_avg_fields
+    count(columns: [user_type_select_column!], distinct: Boolean): Int
+    max: user_type_max_fields
+    min: user_type_min_fields
+    stddev: user_type_stddev_fields
+    stddev_pop: user_type_stddev_pop_fields
+    stddev_samp: user_type_stddev_samp_fields
+    sum: user_type_sum_fields
+    var_pop: user_type_var_pop_fields
+    var_samp: user_type_var_samp_fields
+    variance: user_type_variance_fields
+}
+
+"aggregate avg on columns"
+type user_type_avg_fields {
+    id: Float
+}
+
+"aggregate max on columns"
+type user_type_max_fields {
+    id: Int
+    userTypeName: String
+}
+
+"aggregate min on columns"
+type user_type_min_fields {
+    id: Int
+    userTypeName: String
+}
+
+"response of any mutation on the table \"user_type\""
+type user_type_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [user_type!]!
+}
+
+"aggregate stddev on columns"
+type user_type_stddev_fields {
+    id: Float
+}
+
+"aggregate stddev_pop on columns"
+type user_type_stddev_pop_fields {
+    id: Float
+}
+
+"aggregate stddev_samp on columns"
+type user_type_stddev_samp_fields {
+    id: Float
+}
+
+"aggregate sum on columns"
+type user_type_sum_fields {
+    id: Int
+}
+
+"aggregate var_pop on columns"
+type user_type_var_pop_fields {
+    id: Float
+}
+
+"aggregate var_samp on columns"
+type user_type_var_samp_fields {
+    id: Float
+}
+
+"aggregate variance on columns"
+type user_type_variance_fields {
+    id: Float
+}
+
+"unique or primary key constraints on table \"business_stream\""
+enum business_stream_constraint {
+    "unique or primary key constraint"
+    business_stream_pk
+}
+
+"select columns of table \"business_stream\""
+enum business_stream_select_column {
+    "column name"
+    businessStreamName
+    "column name"
+    id
+    "column name"
+    image
+}
+
+"update columns of table \"business_stream\""
+enum business_stream_update_column {
+    "column name"
+    businessStreamName
+    "column name"
+    id
+    "column name"
+    image
+}
+
+"unique or primary key constraints on table \"company\""
+enum company_constraint {
+    "unique or primary key constraint"
+    company_pk
+}
+
+"unique or primary key constraints on table \"company_image\""
+enum company_image_constraint {
+    "unique or primary key constraint"
+    company_image_pk
+}
+
+"select columns of table \"company_image\""
+enum company_image_select_column {
+    "column name"
+    companyId
+    "column name"
+    companyImage
+    "column name"
+    id
+}
+
+"update columns of table \"company_image\""
+enum company_image_update_column {
+    "column name"
+    companyId
+    "column name"
+    companyImage
+    "column name"
+    id
+}
+
+"select columns of table \"company\""
+enum company_select_column {
+    "column name"
+    businessStreamId
+    "column name"
+    companyName
+    "column name"
+    companyWebsiteUrl
+    "column name"
+    establishment_date
+    "column name"
+    id
+    "column name"
+    profileDescription
+}
+
+"update columns of table \"company\""
+enum company_update_column {
+    "column name"
+    businessStreamId
+    "column name"
+    companyName
+    "column name"
+    companyWebsiteUrl
+    "column name"
+    establishment_date
+    "column name"
+    id
+    "column name"
+    profileDescription
+}
+
+"unique or primary key constraints on table \"education_detail\""
+enum education_detail_constraint {
+    "unique or primary key constraint"
+    education_detail_pk
+}
+
+"select columns of table \"education_detail\""
+enum education_detail_select_column {
+    "column name"
+    InstituteUniversityName
+    "column name"
+    certificateDegreeName
+    "column name"
+    cgpa
+    "column name"
+    completionDate
+    "column name"
+    major
+    "column name"
+    percentage
+    "column name"
+    startingDate
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"education_detail\""
+enum education_detail_update_column {
+    "column name"
+    InstituteUniversityName
+    "column name"
+    certificateDegreeName
+    "column name"
+    cgpa
+    "column name"
+    completionDate
+    "column name"
+    major
+    "column name"
+    percentage
+    "column name"
+    startingDate
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"experience_detail\""
+enum experience_detail_constraint {
+    "unique or primary key constraint"
+    experience_detail_pk
+}
+
+"select columns of table \"experience_detail\""
+enum experience_detail_select_column {
+    "column name"
+    companyName
+    "column name"
+    description
+    "column name"
+    endDate
+    "column name"
+    isCurrentJob
+    "column name"
+    jobLocationCity
+    "column name"
+    jobLocationCountry
+    "column name"
+    jobLocationState
+    "column name"
+    jobTitle
+    "column name"
+    startDate
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"experience_detail\""
+enum experience_detail_update_column {
+    "column name"
+    companyName
+    "column name"
+    description
+    "column name"
+    endDate
+    "column name"
+    isCurrentJob
+    "column name"
+    jobLocationCity
+    "column name"
+    jobLocationCountry
+    "column name"
+    jobLocationState
+    "column name"
+    jobTitle
+    "column name"
+    startDate
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"job_location\""
+enum job_location_constraint {
+    "unique or primary key constraint"
+    job_location_pk
+}
+
+"select columns of table \"job_location\""
+enum job_location_select_column {
+    "column name"
+    city
+    "column name"
+    country
+    "column name"
+    id
+    "column name"
+    state
+    "column name"
+    streetAddress
+    "column name"
+    zip
+}
+
+"update columns of table \"job_location\""
+enum job_location_update_column {
+    "column name"
+    city
+    "column name"
+    country
+    "column name"
+    id
+    "column name"
+    state
+    "column name"
+    streetAddress
+    "column name"
+    zip
+}
+
+"unique or primary key constraints on table \"job_post_activity\""
+enum job_post_activity_constraint {
+    "unique or primary key constraint"
+    job_post_activity_pk
+}
+
+"select columns of table \"job_post_activity\""
+enum job_post_activity_select_column {
+    "column name"
+    applyDate
+    "column name"
+    jobPostId
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"job_post_activity\""
+enum job_post_activity_update_column {
+    "column name"
+    applyDate
+    "column name"
+    jobPostId
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"job_post\""
+enum job_post_constraint {
+    "unique or primary key constraint"
+    job_post_pk
+}
+
+"select columns of table \"job_post\""
+enum job_post_select_column {
+    "column name"
+    companyId
+    "column name"
+    createdDate
+    "column name"
+    id
+    "column name"
+    isActive
+    "column name"
+    isCompanyNameHidden
+    "column name"
+    jobDescription
+    "column name"
+    jobLocationId
+    "column name"
+    jobTypeId
+    "column name"
+    postedById
+    "column name"
+    salary
+}
+
+"unique or primary key constraints on table \"job_post_skill_set\""
+enum job_post_skill_set_constraint {
+    "unique or primary key constraint"
+    job_post_skill_set_pk
+}
+
+"select columns of table \"job_post_skill_set\""
+enum job_post_skill_set_select_column {
+    "column name"
+    jobPostId
+    "column name"
+    skillLevel
+    "column name"
+    skillSetId
+}
+
+"update columns of table \"job_post_skill_set\""
+enum job_post_skill_set_update_column {
+    "column name"
+    jobPostId
+    "column name"
+    skillLevel
+    "column name"
+    skillSetId
+}
+
+"update columns of table \"job_post\""
+enum job_post_update_column {
+    "column name"
+    companyId
+    "column name"
+    createdDate
+    "column name"
+    id
+    "column name"
+    isActive
+    "column name"
+    isCompanyNameHidden
+    "column name"
+    jobDescription
+    "column name"
+    jobLocationId
+    "column name"
+    jobTypeId
+    "column name"
+    postedById
+    "column name"
+    salary
+}
+
+"unique or primary key constraints on table \"job_type\""
+enum job_type_constraint {
+    "unique or primary key constraint"
+    job_type_pk
+}
+
+"select columns of table \"job_type\""
+enum job_type_select_column {
+    "column name"
+    id
+    "column name"
+    image
+    "column name"
+    jobType
+}
+
+"update columns of table \"job_type\""
+enum job_type_update_column {
+    "column name"
+    id
+    "column name"
+    image
+    "column name"
+    jobType
+}
+
+"column ordering options"
+enum order_by {
+    "in the ascending order, nulls last"
+    asc
+    "in the ascending order, nulls first"
+    asc_nulls_first
+    "in the ascending order, nulls last"
+    asc_nulls_last
+    "in the descending order, nulls first"
+    desc
+    "in the descending order, nulls first"
+    desc_nulls_first
+    "in the descending order, nulls last"
+    desc_nulls_last
+}
+
+"unique or primary key constraints on table \"seeker_profile\""
+enum seeker_profile_constraint {
+    "unique or primary key constraint"
+    seeker_profile_pk
+}
+
+"select columns of table \"seeker_profile\""
+enum seeker_profile_select_column {
+    "column name"
+    currency
+    "column name"
+    currentSalary
+    "column name"
+    firstName
+    "column name"
+    isAnnuallyMonthly
+    "column name"
+    lastName
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"seeker_profile\""
+enum seeker_profile_update_column {
+    "column name"
+    currency
+    "column name"
+    currentSalary
+    "column name"
+    firstName
+    "column name"
+    isAnnuallyMonthly
+    "column name"
+    lastName
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"seeker_skill_set\""
+enum seeker_skill_set_constraint {
+    "unique or primary key constraint"
+    seeker_skill_set_pk
+}
+
+"select columns of table \"seeker_skill_set\""
+enum seeker_skill_set_select_column {
+    "column name"
+    skillLevel
+    "column name"
+    skillSetId
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"seeker_skill_set\""
+enum seeker_skill_set_update_column {
+    "column name"
+    skillLevel
+    "column name"
+    skillSetId
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"skill_set\""
+enum skill_set_constraint {
+    "unique or primary key constraint"
+    skill_set_pk
+}
+
+"select columns of table \"skill_set\""
+enum skill_set_select_column {
+    "column name"
+    id
+    "column name"
+    skillSetName
+}
+
+"update columns of table \"skill_set\""
+enum skill_set_update_column {
+    "column name"
+    id
+    "column name"
+    skillSetName
+}
+
+"unique or primary key constraints on table \"user_account\""
+enum user_account_constraint {
+    "unique or primary key constraint"
+    user_account_email_key
+    "unique or primary key constraint"
+    user_account_pkey
+}
+
+"select columns of table \"user_account\""
+enum user_account_select_column {
+    "column name"
+    contactNumber
+    "column name"
+    dateOfBirth
+    "column name"
+    email
+    "column name"
+    emailNotificationActive
+    "column name"
+    gender
+    "column name"
+    id
+    "column name"
+    isActive
+    "column name"
+    password
+    "column name"
+    registrationDate
+    "column name"
+    smsNotificationActive
+    "column name"
+    userImage
+    "column name"
+    userTypeId
+}
+
+"update columns of table \"user_account\""
+enum user_account_update_column {
+    "column name"
+    contactNumber
+    "column name"
+    dateOfBirth
+    "column name"
+    email
+    "column name"
+    emailNotificationActive
+    "column name"
+    gender
+    "column name"
+    id
+    "column name"
+    isActive
+    "column name"
+    password
+    "column name"
+    registrationDate
+    "column name"
+    smsNotificationActive
+    "column name"
+    userImage
+    "column name"
+    userTypeId
+}
+
+"unique or primary key constraints on table \"user_log\""
+enum user_log_constraint {
+    "unique or primary key constraint"
+    user_log_pk
+}
+
+"select columns of table \"user_log\""
+enum user_log_select_column {
+    "column name"
+    lastJobApplyDate
+    "column name"
+    lastLoginDate
+    "column name"
+    userAccountId
+}
+
+"update columns of table \"user_log\""
+enum user_log_update_column {
+    "column name"
+    lastJobApplyDate
+    "column name"
+    lastLoginDate
+    "column name"
+    userAccountId
+}
+
+"unique or primary key constraints on table \"user_type\""
+enum user_type_constraint {
+    "unique or primary key constraint"
+    user_type_pk
+}
+
+"select columns of table \"user_type\""
+enum user_type_select_column {
+    "column name"
+    id
+    "column name"
+    userTypeName
+}
+
+"update columns of table \"user_type\""
+enum user_type_update_column {
+    "column name"
+    id
+    "column name"
+    userTypeName
+}
+
+"expression to compare columns of type Boolean. All fields are combined with logical 'AND'."
+input Boolean_comparison_exp {
+    _eq: Boolean
+    _gt: Boolean
+    _gte: Boolean
+    _in: [Boolean!]
+    _is_null: Boolean
+    _lt: Boolean
+    _lte: Boolean
+    _neq: Boolean
+    _nin: [Boolean!]
+}
+
+"expression to compare columns of type Int. All fields are combined with logical 'AND'."
+input Int_comparison_exp {
+    _eq: Int
+    _gt: Int
+    _gte: Int
+    _in: [Int!]
+    _is_null: Boolean
+    _lt: Int
+    _lte: Int
+    _neq: Int
+    _nin: [Int!]
+}
+
+"expression to compare columns of type String. All fields are combined with logical 'AND'."
+input String_comparison_exp {
+    _eq: String
+    _gt: String
+    _gte: String
+    _ilike: String
+    _in: [String!]
+    _is_null: Boolean
+    _like: String
+    _lt: String
+    _lte: String
+    _neq: String
+    _nilike: String
+    _nin: [String!]
+    _nlike: String
+    _nsimilar: String
+    _similar: String
+}
+
+"expression to compare columns of type bpchar. All fields are combined with logical 'AND'."
+input bpchar_comparison_exp {
+    _eq: bpchar
+    _gt: bpchar
+    _gte: bpchar
+    _in: [bpchar!]
+    _is_null: Boolean
+    _lt: bpchar
+    _lte: bpchar
+    _neq: bpchar
+    _nin: [bpchar!]
+}
+
+"order by aggregate values of table \"business_stream\""
+input business_stream_aggregate_order_by {
+    avg: business_stream_avg_order_by
+    count: order_by
+    max: business_stream_max_order_by
+    min: business_stream_min_order_by
+    stddev: business_stream_stddev_order_by
+    stddev_pop: business_stream_stddev_pop_order_by
+    stddev_samp: business_stream_stddev_samp_order_by
+    sum: business_stream_sum_order_by
+    var_pop: business_stream_var_pop_order_by
+    var_samp: business_stream_var_samp_order_by
+    variance: business_stream_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"business_stream\""
+input business_stream_arr_rel_insert_input {
+    data: [business_stream_insert_input!]!
+    on_conflict: business_stream_on_conflict
+}
+
+"order by avg() on columns of table \"business_stream\""
+input business_stream_avg_order_by {
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"business_stream\". All fields are combined with a logical 'AND'."
+input business_stream_bool_exp {
+    _and: [business_stream_bool_exp]
+    _not: business_stream_bool_exp
+    _or: [business_stream_bool_exp]
+    businessStreamName: String_comparison_exp
+    id: Int_comparison_exp
+    image: String_comparison_exp
+}
+
+"input type for incrementing integer column in table \"business_stream\""
+input business_stream_inc_input {
+    id: Int
+}
+
+"input type for inserting data into table \"business_stream\""
+input business_stream_insert_input {
+    businessStreamName: String
+    id: Int
+    image: String
+}
+
+"order by max() on columns of table \"business_stream\""
+input business_stream_max_order_by {
+    businessStreamName: order_by
+    id: order_by
+    image: order_by
+}
+
+"order by min() on columns of table \"business_stream\""
+input business_stream_min_order_by {
+    businessStreamName: order_by
+    id: order_by
+    image: order_by
+}
+
+"input type for inserting object relation for remote table \"business_stream\""
+input business_stream_obj_rel_insert_input {
+    data: business_stream_insert_input!
+    on_conflict: business_stream_on_conflict
+}
+
+"on conflict condition type for table \"business_stream\""
+input business_stream_on_conflict {
+    constraint: business_stream_constraint!
+    update_columns: [business_stream_update_column!]!
+    where: business_stream_bool_exp
+}
+
+"ordering options when selecting data from \"business_stream\""
+input business_stream_order_by {
+    businessStreamName: order_by
+    id: order_by
+    image: order_by
+}
+
+"primary key columns input for table: \"business_stream\""
+input business_stream_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"business_stream\""
+input business_stream_set_input {
+    businessStreamName: String
+    id: Int
+    image: String
+}
+
+"order by stddev() on columns of table \"business_stream\""
+input business_stream_stddev_order_by {
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"business_stream\""
+input business_stream_stddev_pop_order_by {
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"business_stream\""
+input business_stream_stddev_samp_order_by {
+    id: order_by
+}
+
+"order by sum() on columns of table \"business_stream\""
+input business_stream_sum_order_by {
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"business_stream\""
+input business_stream_var_pop_order_by {
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"business_stream\""
+input business_stream_var_samp_order_by {
+    id: order_by
+}
+
+"order by variance() on columns of table \"business_stream\""
+input business_stream_variance_order_by {
+    id: order_by
+}
+
+"order by aggregate values of table \"company\""
+input company_aggregate_order_by {
+    avg: company_avg_order_by
+    count: order_by
+    max: company_max_order_by
+    min: company_min_order_by
+    stddev: company_stddev_order_by
+    stddev_pop: company_stddev_pop_order_by
+    stddev_samp: company_stddev_samp_order_by
+    sum: company_sum_order_by
+    var_pop: company_var_pop_order_by
+    var_samp: company_var_samp_order_by
+    variance: company_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"company\""
+input company_arr_rel_insert_input {
+    data: [company_insert_input!]!
+    on_conflict: company_on_conflict
+}
+
+"order by avg() on columns of table \"company\""
+input company_avg_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"company\". All fields are combined with a logical 'AND'."
+input company_bool_exp {
+    _and: [company_bool_exp]
+    _not: company_bool_exp
+    _or: [company_bool_exp]
+    businessStream: business_stream_bool_exp
+    businessStreamId: Int_comparison_exp
+    companyName: String_comparison_exp
+    companyWebsiteUrl: String_comparison_exp
+    establishment_date: date_comparison_exp
+    id: Int_comparison_exp
+    profileDescription: String_comparison_exp
+}
+
+"order by aggregate values of table \"company_image\""
+input company_image_aggregate_order_by {
+    avg: company_image_avg_order_by
+    count: order_by
+    max: company_image_max_order_by
+    min: company_image_min_order_by
+    stddev: company_image_stddev_order_by
+    stddev_pop: company_image_stddev_pop_order_by
+    stddev_samp: company_image_stddev_samp_order_by
+    sum: company_image_sum_order_by
+    var_pop: company_image_var_pop_order_by
+    var_samp: company_image_var_samp_order_by
+    variance: company_image_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"company_image\""
+input company_image_arr_rel_insert_input {
+    data: [company_image_insert_input!]!
+    on_conflict: company_image_on_conflict
+}
+
+"order by avg() on columns of table \"company_image\""
+input company_image_avg_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"company_image\". All fields are combined with a logical 'AND'."
+input company_image_bool_exp {
+    _and: [company_image_bool_exp]
+    _not: company_image_bool_exp
+    _or: [company_image_bool_exp]
+    company: company_bool_exp
+    companyId: Int_comparison_exp
+    companyImage: String_comparison_exp
+    id: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"company_image\""
+input company_image_inc_input {
+    companyId: Int
+    id: Int
+}
+
+"input type for inserting data into table \"company_image\""
+input company_image_insert_input {
+    company: company_obj_rel_insert_input
+    companyId: Int
+    companyImage: String
+    id: Int
+}
+
+"order by max() on columns of table \"company_image\""
+input company_image_max_order_by {
+    companyId: order_by
+    companyImage: order_by
+    id: order_by
+}
+
+"order by min() on columns of table \"company_image\""
+input company_image_min_order_by {
+    companyId: order_by
+    companyImage: order_by
+    id: order_by
+}
+
+"input type for inserting object relation for remote table \"company_image\""
+input company_image_obj_rel_insert_input {
+    data: company_image_insert_input!
+    on_conflict: company_image_on_conflict
+}
+
+"on conflict condition type for table \"company_image\""
+input company_image_on_conflict {
+    constraint: company_image_constraint!
+    update_columns: [company_image_update_column!]!
+    where: company_image_bool_exp
+}
+
+"ordering options when selecting data from \"company_image\""
+input company_image_order_by {
+    company: company_order_by
+    companyId: order_by
+    companyImage: order_by
+    id: order_by
+}
+
+"primary key columns input for table: \"company_image\""
+input company_image_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"company_image\""
+input company_image_set_input {
+    companyId: Int
+    companyImage: String
+    id: Int
+}
+
+"order by stddev() on columns of table \"company_image\""
+input company_image_stddev_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"company_image\""
+input company_image_stddev_pop_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"company_image\""
+input company_image_stddev_samp_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by sum() on columns of table \"company_image\""
+input company_image_sum_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"company_image\""
+input company_image_var_pop_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"company_image\""
+input company_image_var_samp_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"order by variance() on columns of table \"company_image\""
+input company_image_variance_order_by {
+    companyId: order_by
+    id: order_by
+}
+
+"input type for incrementing integer column in table \"company\""
+input company_inc_input {
+    businessStreamId: Int
+    id: Int
+}
+
+"input type for inserting data into table \"company\""
+input company_insert_input {
+    businessStream: business_stream_obj_rel_insert_input
+    businessStreamId: Int
+    companyName: String
+    companyWebsiteUrl: String
+    establishment_date: date
+    id: Int
+    profileDescription: String
+}
+
+"order by max() on columns of table \"company\""
+input company_max_order_by {
+    businessStreamId: order_by
+    companyName: order_by
+    companyWebsiteUrl: order_by
+    establishment_date: order_by
+    id: order_by
+    profileDescription: order_by
+}
+
+"order by min() on columns of table \"company\""
+input company_min_order_by {
+    businessStreamId: order_by
+    companyName: order_by
+    companyWebsiteUrl: order_by
+    establishment_date: order_by
+    id: order_by
+    profileDescription: order_by
+}
+
+"input type for inserting object relation for remote table \"company\""
+input company_obj_rel_insert_input {
+    data: company_insert_input!
+    on_conflict: company_on_conflict
+}
+
+"on conflict condition type for table \"company\""
+input company_on_conflict {
+    constraint: company_constraint!
+    update_columns: [company_update_column!]!
+    where: company_bool_exp
+}
+
+"ordering options when selecting data from \"company\""
+input company_order_by {
+    businessStream: business_stream_order_by
+    businessStreamId: order_by
+    companyName: order_by
+    companyWebsiteUrl: order_by
+    establishment_date: order_by
+    id: order_by
+    profileDescription: order_by
+}
+
+"primary key columns input for table: \"company\""
+input company_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"company\""
+input company_set_input {
+    businessStreamId: Int
+    companyName: String
+    companyWebsiteUrl: String
+    establishment_date: date
+    id: Int
+    profileDescription: String
+}
+
+"order by stddev() on columns of table \"company\""
+input company_stddev_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"company\""
+input company_stddev_pop_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"company\""
+input company_stddev_samp_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by sum() on columns of table \"company\""
+input company_sum_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"company\""
+input company_var_pop_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"company\""
+input company_var_samp_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"order by variance() on columns of table \"company\""
+input company_variance_order_by {
+    businessStreamId: order_by
+    id: order_by
+}
+
+"expression to compare columns of type date. All fields are combined with logical 'AND'."
+input date_comparison_exp {
+    _eq: date
+    _gt: date
+    _gte: date
+    _in: [date!]
+    _is_null: Boolean
+    _lt: date
+    _lte: date
+    _neq: date
+    _nin: [date!]
+}
+
+"order by aggregate values of table \"education_detail\""
+input education_detail_aggregate_order_by {
+    avg: education_detail_avg_order_by
+    count: order_by
+    max: education_detail_max_order_by
+    min: education_detail_min_order_by
+    stddev: education_detail_stddev_order_by
+    stddev_pop: education_detail_stddev_pop_order_by
+    stddev_samp: education_detail_stddev_samp_order_by
+    sum: education_detail_sum_order_by
+    var_pop: education_detail_var_pop_order_by
+    var_samp: education_detail_var_samp_order_by
+    variance: education_detail_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"education_detail\""
+input education_detail_arr_rel_insert_input {
+    data: [education_detail_insert_input!]!
+    on_conflict: education_detail_on_conflict
+}
+
+"order by avg() on columns of table \"education_detail\""
+input education_detail_avg_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"education_detail\". All fields are combined with a logical 'AND'."
+input education_detail_bool_exp {
+    InstituteUniversityName: String_comparison_exp
+    _and: [education_detail_bool_exp]
+    _not: education_detail_bool_exp
+    _or: [education_detail_bool_exp]
+    certificateDegreeName: String_comparison_exp
+    cgpa: Int_comparison_exp
+    completionDate: date_comparison_exp
+    major: String_comparison_exp
+    percentage: Int_comparison_exp
+    seekerProfile: seeker_profile_bool_exp
+    startingDate: date_comparison_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"education_detail\""
+input education_detail_inc_input {
+    cgpa: Int
+    percentage: Int
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"education_detail\""
+input education_detail_insert_input {
+    InstituteUniversityName: String
+    certificateDegreeName: String
+    cgpa: Int
+    completionDate: date
+    major: String
+    percentage: Int
+    seekerProfile: seeker_profile_obj_rel_insert_input
+    startingDate: date
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"education_detail\""
+input education_detail_max_order_by {
+    InstituteUniversityName: order_by
+    certificateDegreeName: order_by
+    cgpa: order_by
+    completionDate: order_by
+    major: order_by
+    percentage: order_by
+    startingDate: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"education_detail\""
+input education_detail_min_order_by {
+    InstituteUniversityName: order_by
+    certificateDegreeName: order_by
+    cgpa: order_by
+    completionDate: order_by
+    major: order_by
+    percentage: order_by
+    startingDate: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"education_detail\""
+input education_detail_obj_rel_insert_input {
+    data: education_detail_insert_input!
+    on_conflict: education_detail_on_conflict
+}
+
+"on conflict condition type for table \"education_detail\""
+input education_detail_on_conflict {
+    constraint: education_detail_constraint!
+    update_columns: [education_detail_update_column!]!
+    where: education_detail_bool_exp
+}
+
+"ordering options when selecting data from \"education_detail\""
+input education_detail_order_by {
+    InstituteUniversityName: order_by
+    certificateDegreeName: order_by
+    cgpa: order_by
+    completionDate: order_by
+    major: order_by
+    percentage: order_by
+    seekerProfile: seeker_profile_order_by
+    startingDate: order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"education_detail\""
+input education_detail_pk_columns_input {
+    certificateDegreeName: String!
+    major: String!
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"education_detail\""
+input education_detail_set_input {
+    InstituteUniversityName: String
+    certificateDegreeName: String
+    cgpa: Int
+    completionDate: date
+    major: String
+    percentage: Int
+    startingDate: date
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"education_detail\""
+input education_detail_stddev_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"education_detail\""
+input education_detail_stddev_pop_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"education_detail\""
+input education_detail_stddev_samp_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"education_detail\""
+input education_detail_sum_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"education_detail\""
+input education_detail_var_pop_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"education_detail\""
+input education_detail_var_samp_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"education_detail\""
+input education_detail_variance_order_by {
+    cgpa: order_by
+    percentage: order_by
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"experience_detail\""
+input experience_detail_aggregate_order_by {
+    avg: experience_detail_avg_order_by
+    count: order_by
+    max: experience_detail_max_order_by
+    min: experience_detail_min_order_by
+    stddev: experience_detail_stddev_order_by
+    stddev_pop: experience_detail_stddev_pop_order_by
+    stddev_samp: experience_detail_stddev_samp_order_by
+    sum: experience_detail_sum_order_by
+    var_pop: experience_detail_var_pop_order_by
+    var_samp: experience_detail_var_samp_order_by
+    variance: experience_detail_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"experience_detail\""
+input experience_detail_arr_rel_insert_input {
+    data: [experience_detail_insert_input!]!
+    on_conflict: experience_detail_on_conflict
+}
+
+"order by avg() on columns of table \"experience_detail\""
+input experience_detail_avg_order_by {
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"experience_detail\". All fields are combined with a logical 'AND'."
+input experience_detail_bool_exp {
+    _and: [experience_detail_bool_exp]
+    _not: experience_detail_bool_exp
+    _or: [experience_detail_bool_exp]
+    companyName: String_comparison_exp
+    description: String_comparison_exp
+    endDate: date_comparison_exp
+    isCurrentJob: bpchar_comparison_exp
+    jobLocationCity: String_comparison_exp
+    jobLocationCountry: String_comparison_exp
+    jobLocationState: String_comparison_exp
+    jobTitle: String_comparison_exp
+    seekerProfile: seeker_profile_bool_exp
+    startDate: date_comparison_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"experience_detail\""
+input experience_detail_inc_input {
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"experience_detail\""
+input experience_detail_insert_input {
+    companyName: String
+    description: String
+    endDate: date
+    isCurrentJob: bpchar
+    jobLocationCity: String
+    jobLocationCountry: String
+    jobLocationState: String
+    jobTitle: String
+    seekerProfile: seeker_profile_obj_rel_insert_input
+    startDate: date
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"experience_detail\""
+input experience_detail_max_order_by {
+    companyName: order_by
+    description: order_by
+    endDate: order_by
+    jobLocationCity: order_by
+    jobLocationCountry: order_by
+    jobLocationState: order_by
+    jobTitle: order_by
+    startDate: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"experience_detail\""
+input experience_detail_min_order_by {
+    companyName: order_by
+    description: order_by
+    endDate: order_by
+    jobLocationCity: order_by
+    jobLocationCountry: order_by
+    jobLocationState: order_by
+    jobTitle: order_by
+    startDate: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"experience_detail\""
+input experience_detail_obj_rel_insert_input {
+    data: experience_detail_insert_input!
+    on_conflict: experience_detail_on_conflict
+}
+
+"on conflict condition type for table \"experience_detail\""
+input experience_detail_on_conflict {
+    constraint: experience_detail_constraint!
+    update_columns: [experience_detail_update_column!]!
+    where: experience_detail_bool_exp
+}
+
+"ordering options when selecting data from \"experience_detail\""
+input experience_detail_order_by {
+    companyName: order_by
+    description: order_by
+    endDate: order_by
+    isCurrentJob: order_by
+    jobLocationCity: order_by
+    jobLocationCountry: order_by
+    jobLocationState: order_by
+    jobTitle: order_by
+    seekerProfile: seeker_profile_order_by
+    startDate: order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"experience_detail\""
+input experience_detail_pk_columns_input {
+    endDate: date!
+    startDate: date!
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"experience_detail\""
+input experience_detail_set_input {
+    companyName: String
+    description: String
+    endDate: date
+    isCurrentJob: bpchar
+    jobLocationCity: String
+    jobLocationCountry: String
+    jobLocationState: String
+    jobTitle: String
+    startDate: date
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"experience_detail\""
+input experience_detail_stddev_order_by {
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"experience_detail\""
+input experience_detail_stddev_pop_order_by {
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"experience_detail\""
+input experience_detail_stddev_samp_order_by {
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"experience_detail\""
+input experience_detail_sum_order_by {
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"experience_detail\""
+input experience_detail_var_pop_order_by {
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"experience_detail\""
+input experience_detail_var_samp_order_by {
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"experience_detail\""
+input experience_detail_variance_order_by {
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"job_location\""
+input job_location_aggregate_order_by {
+    avg: job_location_avg_order_by
+    count: order_by
+    max: job_location_max_order_by
+    min: job_location_min_order_by
+    stddev: job_location_stddev_order_by
+    stddev_pop: job_location_stddev_pop_order_by
+    stddev_samp: job_location_stddev_samp_order_by
+    sum: job_location_sum_order_by
+    var_pop: job_location_var_pop_order_by
+    var_samp: job_location_var_samp_order_by
+    variance: job_location_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"job_location\""
+input job_location_arr_rel_insert_input {
+    data: [job_location_insert_input!]!
+    on_conflict: job_location_on_conflict
+}
+
+"order by avg() on columns of table \"job_location\""
+input job_location_avg_order_by {
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"job_location\". All fields are combined with a logical 'AND'."
+input job_location_bool_exp {
+    _and: [job_location_bool_exp]
+    _not: job_location_bool_exp
+    _or: [job_location_bool_exp]
+    city: String_comparison_exp
+    country: String_comparison_exp
+    id: Int_comparison_exp
+    state: String_comparison_exp
+    streetAddress: String_comparison_exp
+    zip: String_comparison_exp
+}
+
+"input type for incrementing integer column in table \"job_location\""
+input job_location_inc_input {
+    id: Int
+}
+
+"input type for inserting data into table \"job_location\""
+input job_location_insert_input {
+    city: String
+    country: String
+    id: Int
+    state: String
+    streetAddress: String
+    zip: String
+}
+
+"order by max() on columns of table \"job_location\""
+input job_location_max_order_by {
+    city: order_by
+    country: order_by
+    id: order_by
+    state: order_by
+    streetAddress: order_by
+    zip: order_by
+}
+
+"order by min() on columns of table \"job_location\""
+input job_location_min_order_by {
+    city: order_by
+    country: order_by
+    id: order_by
+    state: order_by
+    streetAddress: order_by
+    zip: order_by
+}
+
+"input type for inserting object relation for remote table \"job_location\""
+input job_location_obj_rel_insert_input {
+    data: job_location_insert_input!
+    on_conflict: job_location_on_conflict
+}
+
+"on conflict condition type for table \"job_location\""
+input job_location_on_conflict {
+    constraint: job_location_constraint!
+    update_columns: [job_location_update_column!]!
+    where: job_location_bool_exp
+}
+
+"ordering options when selecting data from \"job_location\""
+input job_location_order_by {
+    city: order_by
+    country: order_by
+    id: order_by
+    state: order_by
+    streetAddress: order_by
+    zip: order_by
+}
+
+"primary key columns input for table: \"job_location\""
+input job_location_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"job_location\""
+input job_location_set_input {
+    city: String
+    country: String
+    id: Int
+    state: String
+    streetAddress: String
+    zip: String
+}
+
+"order by stddev() on columns of table \"job_location\""
+input job_location_stddev_order_by {
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"job_location\""
+input job_location_stddev_pop_order_by {
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"job_location\""
+input job_location_stddev_samp_order_by {
+    id: order_by
+}
+
+"order by sum() on columns of table \"job_location\""
+input job_location_sum_order_by {
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"job_location\""
+input job_location_var_pop_order_by {
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"job_location\""
+input job_location_var_samp_order_by {
+    id: order_by
+}
+
+"order by variance() on columns of table \"job_location\""
+input job_location_variance_order_by {
+    id: order_by
+}
+
+"order by aggregate values of table \"job_post_activity\""
+input job_post_activity_aggregate_order_by {
+    avg: job_post_activity_avg_order_by
+    count: order_by
+    max: job_post_activity_max_order_by
+    min: job_post_activity_min_order_by
+    stddev: job_post_activity_stddev_order_by
+    stddev_pop: job_post_activity_stddev_pop_order_by
+    stddev_samp: job_post_activity_stddev_samp_order_by
+    sum: job_post_activity_sum_order_by
+    var_pop: job_post_activity_var_pop_order_by
+    var_samp: job_post_activity_var_samp_order_by
+    variance: job_post_activity_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"job_post_activity\""
+input job_post_activity_arr_rel_insert_input {
+    data: [job_post_activity_insert_input!]!
+    on_conflict: job_post_activity_on_conflict
+}
+
+"order by avg() on columns of table \"job_post_activity\""
+input job_post_activity_avg_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"job_post_activity\". All fields are combined with a logical 'AND'."
+input job_post_activity_bool_exp {
+    _and: [job_post_activity_bool_exp]
+    _not: job_post_activity_bool_exp
+    _or: [job_post_activity_bool_exp]
+    applyDate: date_comparison_exp
+    jobPost: job_post_bool_exp
+    jobPostId: Int_comparison_exp
+    userAccount: user_account_bool_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"job_post_activity\""
+input job_post_activity_inc_input {
+    jobPostId: Int
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"job_post_activity\""
+input job_post_activity_insert_input {
+    applyDate: date
+    jobPost: job_post_obj_rel_insert_input
+    jobPostId: Int
+    userAccount: user_account_obj_rel_insert_input
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"job_post_activity\""
+input job_post_activity_max_order_by {
+    applyDate: order_by
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"job_post_activity\""
+input job_post_activity_min_order_by {
+    applyDate: order_by
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"job_post_activity\""
+input job_post_activity_obj_rel_insert_input {
+    data: job_post_activity_insert_input!
+    on_conflict: job_post_activity_on_conflict
+}
+
+"on conflict condition type for table \"job_post_activity\""
+input job_post_activity_on_conflict {
+    constraint: job_post_activity_constraint!
+    update_columns: [job_post_activity_update_column!]!
+    where: job_post_activity_bool_exp
+}
+
+"ordering options when selecting data from \"job_post_activity\""
+input job_post_activity_order_by {
+    applyDate: order_by
+    jobPost: job_post_order_by
+    jobPostId: order_by
+    userAccount: user_account_order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"job_post_activity\""
+input job_post_activity_pk_columns_input {
+    jobPostId: Int!
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"job_post_activity\""
+input job_post_activity_set_input {
+    applyDate: date
+    jobPostId: Int
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"job_post_activity\""
+input job_post_activity_stddev_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"job_post_activity\""
+input job_post_activity_stddev_pop_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"job_post_activity\""
+input job_post_activity_stddev_samp_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"job_post_activity\""
+input job_post_activity_sum_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"job_post_activity\""
+input job_post_activity_var_pop_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"job_post_activity\""
+input job_post_activity_var_samp_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"job_post_activity\""
+input job_post_activity_variance_order_by {
+    jobPostId: order_by
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"job_post\""
+input job_post_aggregate_order_by {
+    avg: job_post_avg_order_by
+    count: order_by
+    max: job_post_max_order_by
+    min: job_post_min_order_by
+    stddev: job_post_stddev_order_by
+    stddev_pop: job_post_stddev_pop_order_by
+    stddev_samp: job_post_stddev_samp_order_by
+    sum: job_post_sum_order_by
+    var_pop: job_post_var_pop_order_by
+    var_samp: job_post_var_samp_order_by
+    variance: job_post_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"job_post\""
+input job_post_arr_rel_insert_input {
+    data: [job_post_insert_input!]!
+    on_conflict: job_post_on_conflict
+}
+
+"order by avg() on columns of table \"job_post\""
+input job_post_avg_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"Boolean expression to filter rows from the table \"job_post\". All fields are combined with a logical 'AND'."
+input job_post_bool_exp {
+    _and: [job_post_bool_exp]
+    _not: job_post_bool_exp
+    _or: [job_post_bool_exp]
+    company: company_bool_exp
+    companyId: Int_comparison_exp
+    createdDate: date_comparison_exp
+    id: Int_comparison_exp
+    isActive: Boolean_comparison_exp
+    isCompanyNameHidden: Boolean_comparison_exp
+    jobDescription: String_comparison_exp
+    jobLocation: job_location_bool_exp
+    jobLocationId: Int_comparison_exp
+    jobType: job_type_bool_exp
+    jobTypeId: Int_comparison_exp
+    postedById: Int_comparison_exp
+    salary: Int_comparison_exp
+    userAccount: user_account_bool_exp
+}
+
+"input type for incrementing integer column in table \"job_post\""
+input job_post_inc_input {
+    companyId: Int
+    id: Int
+    jobLocationId: Int
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+}
+
+"input type for inserting data into table \"job_post\""
+input job_post_insert_input {
+    company: company_obj_rel_insert_input
+    companyId: Int
+    createdDate: date
+    id: Int
+    isActive: Boolean
+    isCompanyNameHidden: Boolean
+    jobDescription: String
+    jobLocation: job_location_obj_rel_insert_input
+    jobLocationId: Int
+    jobType: job_type_obj_rel_insert_input
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+    userAccount: user_account_obj_rel_insert_input
+}
+
+"order by max() on columns of table \"job_post\""
+input job_post_max_order_by {
+    companyId: order_by
+    createdDate: order_by
+    id: order_by
+    jobDescription: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by min() on columns of table \"job_post\""
+input job_post_min_order_by {
+    companyId: order_by
+    createdDate: order_by
+    id: order_by
+    jobDescription: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"input type for inserting object relation for remote table \"job_post\""
+input job_post_obj_rel_insert_input {
+    data: job_post_insert_input!
+    on_conflict: job_post_on_conflict
+}
+
+"on conflict condition type for table \"job_post\""
+input job_post_on_conflict {
+    constraint: job_post_constraint!
+    update_columns: [job_post_update_column!]!
+    where: job_post_bool_exp
+}
+
+"ordering options when selecting data from \"job_post\""
+input job_post_order_by {
+    company: company_order_by
+    companyId: order_by
+    createdDate: order_by
+    id: order_by
+    isActive: order_by
+    isCompanyNameHidden: order_by
+    jobDescription: order_by
+    jobLocation: job_location_order_by
+    jobLocationId: order_by
+    jobType: job_type_order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+    userAccount: user_account_order_by
+}
+
+"primary key columns input for table: \"job_post\""
+input job_post_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"job_post\""
+input job_post_set_input {
+    companyId: Int
+    createdDate: date
+    id: Int
+    isActive: Boolean
+    isCompanyNameHidden: Boolean
+    jobDescription: String
+    jobLocationId: Int
+    jobTypeId: Int
+    postedById: Int
+    salary: Int
+}
+
+"order by aggregate values of table \"job_post_skill_set\""
+input job_post_skill_set_aggregate_order_by {
+    avg: job_post_skill_set_avg_order_by
+    count: order_by
+    max: job_post_skill_set_max_order_by
+    min: job_post_skill_set_min_order_by
+    stddev: job_post_skill_set_stddev_order_by
+    stddev_pop: job_post_skill_set_stddev_pop_order_by
+    stddev_samp: job_post_skill_set_stddev_samp_order_by
+    sum: job_post_skill_set_sum_order_by
+    var_pop: job_post_skill_set_var_pop_order_by
+    var_samp: job_post_skill_set_var_samp_order_by
+    variance: job_post_skill_set_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"job_post_skill_set\""
+input job_post_skill_set_arr_rel_insert_input {
+    data: [job_post_skill_set_insert_input!]!
+    on_conflict: job_post_skill_set_on_conflict
+}
+
+"order by avg() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_avg_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"Boolean expression to filter rows from the table \"job_post_skill_set\". All fields are combined with a logical 'AND'."
+input job_post_skill_set_bool_exp {
+    _and: [job_post_skill_set_bool_exp]
+    _not: job_post_skill_set_bool_exp
+    _or: [job_post_skill_set_bool_exp]
+    jobPost: job_post_bool_exp
+    jobPostId: Int_comparison_exp
+    skillLevel: Int_comparison_exp
+    skillSet: skill_set_bool_exp
+    skillSetId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"job_post_skill_set\""
+input job_post_skill_set_inc_input {
+    jobPostId: Int
+    skillLevel: Int
+    skillSetId: Int
+}
+
+"input type for inserting data into table \"job_post_skill_set\""
+input job_post_skill_set_insert_input {
+    jobPost: job_post_obj_rel_insert_input
+    jobPostId: Int
+    skillLevel: Int
+    skillSet: skill_set_obj_rel_insert_input
+    skillSetId: Int
+}
+
+"order by max() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_max_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by min() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_min_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"input type for inserting object relation for remote table \"job_post_skill_set\""
+input job_post_skill_set_obj_rel_insert_input {
+    data: job_post_skill_set_insert_input!
+    on_conflict: job_post_skill_set_on_conflict
+}
+
+"on conflict condition type for table \"job_post_skill_set\""
+input job_post_skill_set_on_conflict {
+    constraint: job_post_skill_set_constraint!
+    update_columns: [job_post_skill_set_update_column!]!
+    where: job_post_skill_set_bool_exp
+}
+
+"ordering options when selecting data from \"job_post_skill_set\""
+input job_post_skill_set_order_by {
+    jobPost: job_post_order_by
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSet: skill_set_order_by
+    skillSetId: order_by
+}
+
+"primary key columns input for table: \"job_post_skill_set\""
+input job_post_skill_set_pk_columns_input {
+    jobPostId: Int!
+    skillSetId: Int!
+}
+
+"input type for updating data in table \"job_post_skill_set\""
+input job_post_skill_set_set_input {
+    jobPostId: Int
+    skillLevel: Int
+    skillSetId: Int
+}
+
+"order by stddev() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_stddev_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by stddev_pop() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_stddev_pop_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by stddev_samp() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_stddev_samp_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by sum() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_sum_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by var_pop() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_var_pop_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by var_samp() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_var_samp_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by variance() on columns of table \"job_post_skill_set\""
+input job_post_skill_set_variance_order_by {
+    jobPostId: order_by
+    skillLevel: order_by
+    skillSetId: order_by
+}
+
+"order by stddev() on columns of table \"job_post\""
+input job_post_stddev_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by stddev_pop() on columns of table \"job_post\""
+input job_post_stddev_pop_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by stddev_samp() on columns of table \"job_post\""
+input job_post_stddev_samp_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by sum() on columns of table \"job_post\""
+input job_post_sum_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by var_pop() on columns of table \"job_post\""
+input job_post_var_pop_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by var_samp() on columns of table \"job_post\""
+input job_post_var_samp_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by variance() on columns of table \"job_post\""
+input job_post_variance_order_by {
+    companyId: order_by
+    id: order_by
+    jobLocationId: order_by
+    jobTypeId: order_by
+    postedById: order_by
+    salary: order_by
+}
+
+"order by aggregate values of table \"job_type\""
+input job_type_aggregate_order_by {
+    avg: job_type_avg_order_by
+    count: order_by
+    max: job_type_max_order_by
+    min: job_type_min_order_by
+    stddev: job_type_stddev_order_by
+    stddev_pop: job_type_stddev_pop_order_by
+    stddev_samp: job_type_stddev_samp_order_by
+    sum: job_type_sum_order_by
+    var_pop: job_type_var_pop_order_by
+    var_samp: job_type_var_samp_order_by
+    variance: job_type_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"job_type\""
+input job_type_arr_rel_insert_input {
+    data: [job_type_insert_input!]!
+    on_conflict: job_type_on_conflict
+}
+
+"order by avg() on columns of table \"job_type\""
+input job_type_avg_order_by {
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"job_type\". All fields are combined with a logical 'AND'."
+input job_type_bool_exp {
+    _and: [job_type_bool_exp]
+    _not: job_type_bool_exp
+    _or: [job_type_bool_exp]
+    id: Int_comparison_exp
+    image: String_comparison_exp
+    jobType: String_comparison_exp
+}
+
+"input type for incrementing integer column in table \"job_type\""
+input job_type_inc_input {
+    id: Int
+}
+
+"input type for inserting data into table \"job_type\""
+input job_type_insert_input {
+    id: Int
+    image: String
+    jobType: String
+}
+
+"order by max() on columns of table \"job_type\""
+input job_type_max_order_by {
+    id: order_by
+    image: order_by
+    jobType: order_by
+}
+
+"order by min() on columns of table \"job_type\""
+input job_type_min_order_by {
+    id: order_by
+    image: order_by
+    jobType: order_by
+}
+
+"input type for inserting object relation for remote table \"job_type\""
+input job_type_obj_rel_insert_input {
+    data: job_type_insert_input!
+    on_conflict: job_type_on_conflict
+}
+
+"on conflict condition type for table \"job_type\""
+input job_type_on_conflict {
+    constraint: job_type_constraint!
+    update_columns: [job_type_update_column!]!
+    where: job_type_bool_exp
+}
+
+"ordering options when selecting data from \"job_type\""
+input job_type_order_by {
+    id: order_by
+    image: order_by
+    jobType: order_by
+}
+
+"primary key columns input for table: \"job_type\""
+input job_type_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"job_type\""
+input job_type_set_input {
+    id: Int
+    image: String
+    jobType: String
+}
+
+"order by stddev() on columns of table \"job_type\""
+input job_type_stddev_order_by {
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"job_type\""
+input job_type_stddev_pop_order_by {
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"job_type\""
+input job_type_stddev_samp_order_by {
+    id: order_by
+}
+
+"order by sum() on columns of table \"job_type\""
+input job_type_sum_order_by {
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"job_type\""
+input job_type_var_pop_order_by {
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"job_type\""
+input job_type_var_samp_order_by {
+    id: order_by
+}
+
+"order by variance() on columns of table \"job_type\""
+input job_type_variance_order_by {
+    id: order_by
+}
+
+"order by aggregate values of table \"seeker_profile\""
+input seeker_profile_aggregate_order_by {
+    avg: seeker_profile_avg_order_by
+    count: order_by
+    max: seeker_profile_max_order_by
+    min: seeker_profile_min_order_by
+    stddev: seeker_profile_stddev_order_by
+    stddev_pop: seeker_profile_stddev_pop_order_by
+    stddev_samp: seeker_profile_stddev_samp_order_by
+    sum: seeker_profile_sum_order_by
+    var_pop: seeker_profile_var_pop_order_by
+    var_samp: seeker_profile_var_samp_order_by
+    variance: seeker_profile_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"seeker_profile\""
+input seeker_profile_arr_rel_insert_input {
+    data: [seeker_profile_insert_input!]!
+    on_conflict: seeker_profile_on_conflict
+}
+
+"order by avg() on columns of table \"seeker_profile\""
+input seeker_profile_avg_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"seeker_profile\". All fields are combined with a logical 'AND'."
+input seeker_profile_bool_exp {
+    _and: [seeker_profile_bool_exp]
+    _not: seeker_profile_bool_exp
+    _or: [seeker_profile_bool_exp]
+    currency: String_comparison_exp
+    currentSalary: Int_comparison_exp
+    firstName: String_comparison_exp
+    isAnnuallyMonthly: bpchar_comparison_exp
+    lastName: String_comparison_exp
+    userAccount: user_account_bool_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"seeker_profile\""
+input seeker_profile_inc_input {
+    currentSalary: Int
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"seeker_profile\""
+input seeker_profile_insert_input {
+    currency: String
+    currentSalary: Int
+    firstName: String
+    isAnnuallyMonthly: bpchar
+    lastName: String
+    userAccount: user_account_obj_rel_insert_input
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"seeker_profile\""
+input seeker_profile_max_order_by {
+    currency: order_by
+    currentSalary: order_by
+    firstName: order_by
+    lastName: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"seeker_profile\""
+input seeker_profile_min_order_by {
+    currency: order_by
+    currentSalary: order_by
+    firstName: order_by
+    lastName: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"seeker_profile\""
+input seeker_profile_obj_rel_insert_input {
+    data: seeker_profile_insert_input!
+    on_conflict: seeker_profile_on_conflict
+}
+
+"on conflict condition type for table \"seeker_profile\""
+input seeker_profile_on_conflict {
+    constraint: seeker_profile_constraint!
+    update_columns: [seeker_profile_update_column!]!
+    where: seeker_profile_bool_exp
+}
+
+"ordering options when selecting data from \"seeker_profile\""
+input seeker_profile_order_by {
+    currency: order_by
+    currentSalary: order_by
+    firstName: order_by
+    isAnnuallyMonthly: order_by
+    lastName: order_by
+    userAccount: user_account_order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"seeker_profile\""
+input seeker_profile_pk_columns_input {
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"seeker_profile\""
+input seeker_profile_set_input {
+    currency: String
+    currentSalary: Int
+    firstName: String
+    isAnnuallyMonthly: bpchar
+    lastName: String
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"seeker_profile\""
+input seeker_profile_stddev_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"seeker_profile\""
+input seeker_profile_stddev_pop_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"seeker_profile\""
+input seeker_profile_stddev_samp_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"seeker_profile\""
+input seeker_profile_sum_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"seeker_profile\""
+input seeker_profile_var_pop_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"seeker_profile\""
+input seeker_profile_var_samp_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"seeker_profile\""
+input seeker_profile_variance_order_by {
+    currentSalary: order_by
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"seeker_skill_set\""
+input seeker_skill_set_aggregate_order_by {
+    avg: seeker_skill_set_avg_order_by
+    count: order_by
+    max: seeker_skill_set_max_order_by
+    min: seeker_skill_set_min_order_by
+    stddev: seeker_skill_set_stddev_order_by
+    stddev_pop: seeker_skill_set_stddev_pop_order_by
+    stddev_samp: seeker_skill_set_stddev_samp_order_by
+    sum: seeker_skill_set_sum_order_by
+    var_pop: seeker_skill_set_var_pop_order_by
+    var_samp: seeker_skill_set_var_samp_order_by
+    variance: seeker_skill_set_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"seeker_skill_set\""
+input seeker_skill_set_arr_rel_insert_input {
+    data: [seeker_skill_set_insert_input!]!
+    on_conflict: seeker_skill_set_on_conflict
+}
+
+"order by avg() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_avg_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"seeker_skill_set\". All fields are combined with a logical 'AND'."
+input seeker_skill_set_bool_exp {
+    _and: [seeker_skill_set_bool_exp]
+    _not: seeker_skill_set_bool_exp
+    _or: [seeker_skill_set_bool_exp]
+    seekerProfile: seeker_profile_bool_exp
+    skillLevel: Int_comparison_exp
+    skillSet: skill_set_bool_exp
+    skillSetId: Int_comparison_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"seeker_skill_set\""
+input seeker_skill_set_inc_input {
+    skillLevel: Int
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"seeker_skill_set\""
+input seeker_skill_set_insert_input {
+    seekerProfile: seeker_profile_obj_rel_insert_input
+    skillLevel: Int
+    skillSet: skill_set_obj_rel_insert_input
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_max_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_min_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"seeker_skill_set\""
+input seeker_skill_set_obj_rel_insert_input {
+    data: seeker_skill_set_insert_input!
+    on_conflict: seeker_skill_set_on_conflict
+}
+
+"on conflict condition type for table \"seeker_skill_set\""
+input seeker_skill_set_on_conflict {
+    constraint: seeker_skill_set_constraint!
+    update_columns: [seeker_skill_set_update_column!]!
+    where: seeker_skill_set_bool_exp
+}
+
+"ordering options when selecting data from \"seeker_skill_set\""
+input seeker_skill_set_order_by {
+    seekerProfile: seeker_profile_order_by
+    skillLevel: order_by
+    skillSet: skill_set_order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"seeker_skill_set\""
+input seeker_skill_set_pk_columns_input {
+    skillSetId: Int!
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"seeker_skill_set\""
+input seeker_skill_set_set_input {
+    skillLevel: Int
+    skillSetId: Int
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_stddev_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_stddev_pop_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_stddev_samp_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_sum_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_var_pop_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_var_samp_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"seeker_skill_set\""
+input seeker_skill_set_variance_order_by {
+    skillLevel: order_by
+    skillSetId: order_by
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"skill_set\""
+input skill_set_aggregate_order_by {
+    avg: skill_set_avg_order_by
+    count: order_by
+    max: skill_set_max_order_by
+    min: skill_set_min_order_by
+    stddev: skill_set_stddev_order_by
+    stddev_pop: skill_set_stddev_pop_order_by
+    stddev_samp: skill_set_stddev_samp_order_by
+    sum: skill_set_sum_order_by
+    var_pop: skill_set_var_pop_order_by
+    var_samp: skill_set_var_samp_order_by
+    variance: skill_set_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"skill_set\""
+input skill_set_arr_rel_insert_input {
+    data: [skill_set_insert_input!]!
+    on_conflict: skill_set_on_conflict
+}
+
+"order by avg() on columns of table \"skill_set\""
+input skill_set_avg_order_by {
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"skill_set\". All fields are combined with a logical 'AND'."
+input skill_set_bool_exp {
+    _and: [skill_set_bool_exp]
+    _not: skill_set_bool_exp
+    _or: [skill_set_bool_exp]
+    id: Int_comparison_exp
+    skillSetName: String_comparison_exp
+}
+
+"input type for incrementing integer column in table \"skill_set\""
+input skill_set_inc_input {
+    id: Int
+}
+
+"input type for inserting data into table \"skill_set\""
+input skill_set_insert_input {
+    id: Int
+    skillSetName: String
+}
+
+"order by max() on columns of table \"skill_set\""
+input skill_set_max_order_by {
+    id: order_by
+    skillSetName: order_by
+}
+
+"order by min() on columns of table \"skill_set\""
+input skill_set_min_order_by {
+    id: order_by
+    skillSetName: order_by
+}
+
+"input type for inserting object relation for remote table \"skill_set\""
+input skill_set_obj_rel_insert_input {
+    data: skill_set_insert_input!
+    on_conflict: skill_set_on_conflict
+}
+
+"on conflict condition type for table \"skill_set\""
+input skill_set_on_conflict {
+    constraint: skill_set_constraint!
+    update_columns: [skill_set_update_column!]!
+    where: skill_set_bool_exp
+}
+
+"ordering options when selecting data from \"skill_set\""
+input skill_set_order_by {
+    id: order_by
+    skillSetName: order_by
+}
+
+"primary key columns input for table: \"skill_set\""
+input skill_set_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"skill_set\""
+input skill_set_set_input {
+    id: Int
+    skillSetName: String
+}
+
+"order by stddev() on columns of table \"skill_set\""
+input skill_set_stddev_order_by {
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"skill_set\""
+input skill_set_stddev_pop_order_by {
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"skill_set\""
+input skill_set_stddev_samp_order_by {
+    id: order_by
+}
+
+"order by sum() on columns of table \"skill_set\""
+input skill_set_sum_order_by {
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"skill_set\""
+input skill_set_var_pop_order_by {
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"skill_set\""
+input skill_set_var_samp_order_by {
+    id: order_by
+}
+
+"order by variance() on columns of table \"skill_set\""
+input skill_set_variance_order_by {
+    id: order_by
+}
+
+"order by aggregate values of table \"user_account\""
+input user_account_aggregate_order_by {
+    avg: user_account_avg_order_by
+    count: order_by
+    max: user_account_max_order_by
+    min: user_account_min_order_by
+    stddev: user_account_stddev_order_by
+    stddev_pop: user_account_stddev_pop_order_by
+    stddev_samp: user_account_stddev_samp_order_by
+    sum: user_account_sum_order_by
+    var_pop: user_account_var_pop_order_by
+    var_samp: user_account_var_samp_order_by
+    variance: user_account_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"user_account\""
+input user_account_arr_rel_insert_input {
+    data: [user_account_insert_input!]!
+    on_conflict: user_account_on_conflict
+}
+
+"order by avg() on columns of table \"user_account\""
+input user_account_avg_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"Boolean expression to filter rows from the table \"user_account\". All fields are combined with a logical 'AND'."
+input user_account_bool_exp {
+    _and: [user_account_bool_exp]
+    _not: user_account_bool_exp
+    _or: [user_account_bool_exp]
+    contactNumber: Int_comparison_exp
+    dateOfBirth: date_comparison_exp
+    email: String_comparison_exp
+    emailNotificationActive: Boolean_comparison_exp
+    gender: bpchar_comparison_exp
+    id: Int_comparison_exp
+    isActive: Boolean_comparison_exp
+    password: String_comparison_exp
+    registrationDate: date_comparison_exp
+    smsNotificationActive: Boolean_comparison_exp
+    userImage: String_comparison_exp
+    userType: user_type_bool_exp
+    userTypeId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"user_account\""
+input user_account_inc_input {
+    contactNumber: Int
+    id: Int
+    userTypeId: Int
+}
+
+"input type for inserting data into table \"user_account\""
+input user_account_insert_input {
+    contactNumber: Int
+    dateOfBirth: date
+    email: String
+    emailNotificationActive: Boolean
+    gender: bpchar
+    id: Int
+    isActive: Boolean
+    password: String
+    registrationDate: date
+    smsNotificationActive: Boolean
+    userImage: String
+    userType: user_type_obj_rel_insert_input
+    userTypeId: Int
+}
+
+"order by max() on columns of table \"user_account\""
+input user_account_max_order_by {
+    contactNumber: order_by
+    dateOfBirth: order_by
+    email: order_by
+    id: order_by
+    password: order_by
+    registrationDate: order_by
+    userImage: order_by
+    userTypeId: order_by
+}
+
+"order by min() on columns of table \"user_account\""
+input user_account_min_order_by {
+    contactNumber: order_by
+    dateOfBirth: order_by
+    email: order_by
+    id: order_by
+    password: order_by
+    registrationDate: order_by
+    userImage: order_by
+    userTypeId: order_by
+}
+
+"input type for inserting object relation for remote table \"user_account\""
+input user_account_obj_rel_insert_input {
+    data: user_account_insert_input!
+    on_conflict: user_account_on_conflict
+}
+
+"on conflict condition type for table \"user_account\""
+input user_account_on_conflict {
+    constraint: user_account_constraint!
+    update_columns: [user_account_update_column!]!
+    where: user_account_bool_exp
+}
+
+"ordering options when selecting data from \"user_account\""
+input user_account_order_by {
+    contactNumber: order_by
+    dateOfBirth: order_by
+    email: order_by
+    emailNotificationActive: order_by
+    gender: order_by
+    id: order_by
+    isActive: order_by
+    password: order_by
+    registrationDate: order_by
+    smsNotificationActive: order_by
+    userImage: order_by
+    userType: user_type_order_by
+    userTypeId: order_by
+}
+
+"primary key columns input for table: \"user_account\""
+input user_account_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"user_account\""
+input user_account_set_input {
+    contactNumber: Int
+    dateOfBirth: date
+    email: String
+    emailNotificationActive: Boolean
+    gender: bpchar
+    id: Int
+    isActive: Boolean
+    password: String
+    registrationDate: date
+    smsNotificationActive: Boolean
+    userImage: String
+    userTypeId: Int
+}
+
+"order by stddev() on columns of table \"user_account\""
+input user_account_stddev_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by stddev_pop() on columns of table \"user_account\""
+input user_account_stddev_pop_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by stddev_samp() on columns of table \"user_account\""
+input user_account_stddev_samp_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by sum() on columns of table \"user_account\""
+input user_account_sum_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by var_pop() on columns of table \"user_account\""
+input user_account_var_pop_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by var_samp() on columns of table \"user_account\""
+input user_account_var_samp_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by variance() on columns of table \"user_account\""
+input user_account_variance_order_by {
+    contactNumber: order_by
+    id: order_by
+    userTypeId: order_by
+}
+
+"order by aggregate values of table \"user_log\""
+input user_log_aggregate_order_by {
+    avg: user_log_avg_order_by
+    count: order_by
+    max: user_log_max_order_by
+    min: user_log_min_order_by
+    stddev: user_log_stddev_order_by
+    stddev_pop: user_log_stddev_pop_order_by
+    stddev_samp: user_log_stddev_samp_order_by
+    sum: user_log_sum_order_by
+    var_pop: user_log_var_pop_order_by
+    var_samp: user_log_var_samp_order_by
+    variance: user_log_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"user_log\""
+input user_log_arr_rel_insert_input {
+    data: [user_log_insert_input!]!
+    on_conflict: user_log_on_conflict
+}
+
+"order by avg() on columns of table \"user_log\""
+input user_log_avg_order_by {
+    userAccountId: order_by
+}
+
+"Boolean expression to filter rows from the table \"user_log\". All fields are combined with a logical 'AND'."
+input user_log_bool_exp {
+    _and: [user_log_bool_exp]
+    _not: user_log_bool_exp
+    _or: [user_log_bool_exp]
+    lastJobApplyDate: date_comparison_exp
+    lastLoginDate: date_comparison_exp
+    userAccount: user_account_bool_exp
+    userAccountId: Int_comparison_exp
+}
+
+"input type for incrementing integer column in table \"user_log\""
+input user_log_inc_input {
+    userAccountId: Int
+}
+
+"input type for inserting data into table \"user_log\""
+input user_log_insert_input {
+    lastJobApplyDate: date
+    lastLoginDate: date
+    userAccount: user_account_obj_rel_insert_input
+    userAccountId: Int
+}
+
+"order by max() on columns of table \"user_log\""
+input user_log_max_order_by {
+    lastJobApplyDate: order_by
+    lastLoginDate: order_by
+    userAccountId: order_by
+}
+
+"order by min() on columns of table \"user_log\""
+input user_log_min_order_by {
+    lastJobApplyDate: order_by
+    lastLoginDate: order_by
+    userAccountId: order_by
+}
+
+"input type for inserting object relation for remote table \"user_log\""
+input user_log_obj_rel_insert_input {
+    data: user_log_insert_input!
+    on_conflict: user_log_on_conflict
+}
+
+"on conflict condition type for table \"user_log\""
+input user_log_on_conflict {
+    constraint: user_log_constraint!
+    update_columns: [user_log_update_column!]!
+    where: user_log_bool_exp
+}
+
+"ordering options when selecting data from \"user_log\""
+input user_log_order_by {
+    lastJobApplyDate: order_by
+    lastLoginDate: order_by
+    userAccount: user_account_order_by
+    userAccountId: order_by
+}
+
+"primary key columns input for table: \"user_log\""
+input user_log_pk_columns_input {
+    userAccountId: Int!
+}
+
+"input type for updating data in table \"user_log\""
+input user_log_set_input {
+    lastJobApplyDate: date
+    lastLoginDate: date
+    userAccountId: Int
+}
+
+"order by stddev() on columns of table \"user_log\""
+input user_log_stddev_order_by {
+    userAccountId: order_by
+}
+
+"order by stddev_pop() on columns of table \"user_log\""
+input user_log_stddev_pop_order_by {
+    userAccountId: order_by
+}
+
+"order by stddev_samp() on columns of table \"user_log\""
+input user_log_stddev_samp_order_by {
+    userAccountId: order_by
+}
+
+"order by sum() on columns of table \"user_log\""
+input user_log_sum_order_by {
+    userAccountId: order_by
+}
+
+"order by var_pop() on columns of table \"user_log\""
+input user_log_var_pop_order_by {
+    userAccountId: order_by
+}
+
+"order by var_samp() on columns of table \"user_log\""
+input user_log_var_samp_order_by {
+    userAccountId: order_by
+}
+
+"order by variance() on columns of table \"user_log\""
+input user_log_variance_order_by {
+    userAccountId: order_by
+}
+
+"order by aggregate values of table \"user_type\""
+input user_type_aggregate_order_by {
+    avg: user_type_avg_order_by
+    count: order_by
+    max: user_type_max_order_by
+    min: user_type_min_order_by
+    stddev: user_type_stddev_order_by
+    stddev_pop: user_type_stddev_pop_order_by
+    stddev_samp: user_type_stddev_samp_order_by
+    sum: user_type_sum_order_by
+    var_pop: user_type_var_pop_order_by
+    var_samp: user_type_var_samp_order_by
+    variance: user_type_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"user_type\""
+input user_type_arr_rel_insert_input {
+    data: [user_type_insert_input!]!
+    on_conflict: user_type_on_conflict
+}
+
+"order by avg() on columns of table \"user_type\""
+input user_type_avg_order_by {
+    id: order_by
+}
+
+"Boolean expression to filter rows from the table \"user_type\". All fields are combined with a logical 'AND'."
+input user_type_bool_exp {
+    _and: [user_type_bool_exp]
+    _not: user_type_bool_exp
+    _or: [user_type_bool_exp]
+    id: Int_comparison_exp
+    userTypeName: String_comparison_exp
+}
+
+"input type for incrementing integer column in table \"user_type\""
+input user_type_inc_input {
+    id: Int
+}
+
+"input type for inserting data into table \"user_type\""
+input user_type_insert_input {
+    id: Int
+    userTypeName: String
+}
+
+"order by max() on columns of table \"user_type\""
+input user_type_max_order_by {
+    id: order_by
+    userTypeName: order_by
+}
+
+"order by min() on columns of table \"user_type\""
+input user_type_min_order_by {
+    id: order_by
+    userTypeName: order_by
+}
+
+"input type for inserting object relation for remote table \"user_type\""
+input user_type_obj_rel_insert_input {
+    data: user_type_insert_input!
+    on_conflict: user_type_on_conflict
+}
+
+"on conflict condition type for table \"user_type\""
+input user_type_on_conflict {
+    constraint: user_type_constraint!
+    update_columns: [user_type_update_column!]!
+    where: user_type_bool_exp
+}
+
+"ordering options when selecting data from \"user_type\""
+input user_type_order_by {
+    id: order_by
+    userTypeName: order_by
+}
+
+"primary key columns input for table: \"user_type\""
+input user_type_pk_columns_input {
+    id: Int!
+}
+
+"input type for updating data in table \"user_type\""
+input user_type_set_input {
+    id: Int
+    userTypeName: String
+}
+
+"order by stddev() on columns of table \"user_type\""
+input user_type_stddev_order_by {
+    id: order_by
+}
+
+"order by stddev_pop() on columns of table \"user_type\""
+input user_type_stddev_pop_order_by {
+    id: order_by
+}
+
+"order by stddev_samp() on columns of table \"user_type\""
+input user_type_stddev_samp_order_by {
+    id: order_by
+}
+
+"order by sum() on columns of table \"user_type\""
+input user_type_sum_order_by {
+    id: order_by
+}
+
+"order by var_pop() on columns of table \"user_type\""
+input user_type_var_pop_order_by {
+    id: order_by
+}
+
+"order by var_samp() on columns of table \"user_type\""
+input user_type_var_samp_order_by {
+    id: order_by
+}
+
+"order by variance() on columns of table \"user_type\""
+input user_type_variance_order_by {
+    id: order_by
+}
+
+
+scalar bpchar
+
+scalar date

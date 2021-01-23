@@ -1,0 +1,20 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - lib/graphql/**
+      - lib/graphql/gen/**
+      - lib/graphql/schema/schema.graphql
+    builders:
+      artemis:
+        options:
+          generate_helpers: true
+          schema_mapping:
+            - schema: lib/graphql/schema/schema.graphql
+              queries_glob: lib/graphql/*.graphql
+              output: lib/graphql/gen/graphql_api.dart
+          scalar_mapping:
+            - graphql_type: date
+              dart_type: DateTime
+            - graphql_type: bpchar
+              dart_type: String
